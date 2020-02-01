@@ -1,0 +1,3 @@
+* Hybrid Reverse theme for Emacs
+
+Material color scheme for Emacs based on kristijanhusak/vim-hybrid-material color scheme.
