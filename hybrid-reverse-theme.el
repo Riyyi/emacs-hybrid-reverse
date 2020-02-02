@@ -28,6 +28,7 @@
 ;; - company-mode
 ;; - flycheck
 ;; - ido-vertical-mode
+;; - neotree
 ;; - telephone-line
 ;; - which-key
 
@@ -229,6 +230,24 @@
 
 ;;;;; rainbow-delimiters
    ;;..
+
+;;;;; neotree
+   `(neo-banner-face                          ((t (:foreground ,hr-orange                              :weight bold))))
+   `(neo-button-face                          ((t (                                                    :underline t))))
+   `(neo-dir-link-face                        ((t (:foreground ,hr-blue))))
+   `(neo-expand-btn-face                      ((t (:foreground ,hr-black-7))))
+   `(neo-file-link-face                       ((t (:foreground ,hr-fg))))
+   `(neo-header-face                          ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(neo-root-dir-face                        ((t (:foreground ,hr-orange))))
+   `(neo-vc-added-face                        ((t (:foreground ,hr-green))))
+   `(neo-vc-conflict-face                     ((t (:foreground ,hr-red))))
+   `(neo-vc-default-face                      ((t (:foreground ,hr-fg))))
+   `(neo-vc-edited-face                       ((t (:foreground ,hr-magenta))))
+   `(neo-vc-ignored-face                      ((t (:foreground ,hr-white+6))))
+   `(neo-vc-missing-face                      ((t (:foreground ,hr-red))))
+   `(neo-vc-needs-merge-face                  ((t (:foreground ,hr-red))))
+   `(neo-vc-unlocked-changes-face             ((t (:foreground ,hr-orange                              :slant italic))))
+   `(neo-vc-user-face                         ((t (:foreground ,hr-red                                 :slant italic))))
 
 ;;;;; telephone-line
    `(telephone-line-accent-active             ((t (:foreground ,hr-fg        :background ,hr-black-5))))
