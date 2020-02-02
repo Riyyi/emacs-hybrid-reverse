@@ -26,7 +26,10 @@
 ;; - avy
 ;; - centaur-tabs(?)
 ;; - company-mode
+;; - flycheck
+;; - ido-vertical-mode
 ;; - telephone-line
+;; - which-key
 
 ;;; References:
 
@@ -114,29 +117,54 @@
    `(cursor                                   ((t (                          :background ,hr-white+1))))
    ;; Basic default face
    `(default                                  ((t (:foreground ,hr-fg        :background ,hr-bg))))
+   `(escape-glyph                             ((t (:foreground ,hr-cyan))))
+   `(error                                    ((t (:foreground ,hr-red       :background ,hr-bg))))
+   `(success                                  ((t (:foreground ,hr-green                               :weight bold))))
+   `(warning                                  ((t (:foreground ,hr-orange                              :weight bold))))
+
+;;;;; UI
+   `(custom-group-tag                         ((t (:foreground ,hr-blue))))
+   `(custom-state                             ((t (:foreground ,hr-green))))
+   `(custom-variable-tag                      ((t (:foreground ,hr-blue))))
+   `(fringe                                   ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(highlight                                ((t (:foreground ,hr-yellow    :background ,hr-bg))))
+   `(highlight-changes                        ((t (:foreground ,hr-red       :background ,hr-bg))))
    `(link                                     ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(link-visited                             ((t (:foreground ,hr-blue      :background ,hr-bg))))
+   `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
+   `(region                                   ((t (                          :background ,hr-black-6))))
+   `(secondary-selection                      ((t (                          :background ,hr-black-3))))
+   `(trailing-whitespace                      ((t (                          :background ,hr-red))))
+   `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
 
 ;;;;; font lock
-   `(font-lock-comment-face                   ((t (:foreground ,hr-white+6   :background ,hr-bg))))
-   `(font-lock-comment-delimiter-face         ((t (:foreground ,hr-white+6   :background ,hr-bg))))
-   `(font-lock-constant-face                  ((t (:foreground ,hr-fg        :background ,hr-bg))))
-   `(font-lock-doc-face                       ((t (:foreground ,hr-white+6   :background ,hr-bg))))
-   `(font-lock-function-name-face             ((t (:foreground ,hr-fg        :background ,hr-bg))))
-   `(font-lock-keyword-face                   ((t (:foreground ,hr-blue      :background ,hr-bg))))
-   `(font-lock-preprocessor-face              ((t (:foreground ,hr-cyan      :background ,hr-bg))))
-   `(font-lock-string-face                    ((t (:foreground ,hr-green     :background ,hr-bg))))
-   `(font-lock-type-face                      ((t (:foreground ,hr-orange    :background ,hr-bg))))
-   `(font-lock-variable-name-face             ((t (:foreground ,hr-red       :background ,hr-bg))))
-   ;;..
+   `(font-lock-builtin-face                   ((t (:foreground ,hr-blue))))
+   `(font-lock-comment-face                   ((t (:foreground ,hr-white+6                             :slant italic))))
+   `(font-lock-comment-delimiter-face         ((t (:foreground ,hr-white+6                             :slant italic))))
+   `(font-lock-constant-face                  ((t (:foreground ,hr-fg))))
+   `(font-lock-doc-face                       ((t (:foreground ,hr-white+6))))
+   `(font-lock-function-name-face             ((t (:foreground ,hr-fg))))
+   `(font-lock-keyword-face                   ((t (:foreground ,hr-blue))))
+   `(font-lock-negation-char-face             ((t (:foreground ,hr-cyan))))
+   `(font-lock-preprocessor-face              ((t (:foreground ,hr-cyan))))
+   `(font-lock-regexp-grouping-backslash      ((t (:foreground ,hr-yellow))))
+   `(font-lock-regexp-grouping-construct      ((t (:foreground ,hr-green))))
+   `(font-lock-string-face                    ((t (:foreground ,hr-green))))
+   `(font-lock-type-face                      ((t (:foreground ,hr-orange))))
+   `(font-lock-variable-name-face             ((t (:foreground ,hr-red))))
+   `(font-lock-warning-face                   ((t (:foreground ,hr-red                                 :weight bold))))
 
 ;;;;; ido
-   ;;..
+   `(ido-first-match                          ((t (:foreground ,hr-orange))))
+   `(ido-indicator                            ((t (:foreground ,hr-red))))
+   `(ido-only-match                           ((t (:foreground ,hr-green))))
+   `(ido-subdir                               ((t (:foreground ,hr-magenta))))
 
-;;;;; isearch (/ search)
+;;;;; search
    `(isearch                                  ((t (:foreground ,hr-bg        :background ,hr-yellow))))
+   `(isearch-fail                             ((t (:foreground ,hr-fg        :background ,hr-red+1))))
    `(lazy-highlight                           ((t (:foreground ,hr-bg        :background ,hr-white+5))))
+   `(match                                    ((t (:foreground ,hr-bg        :background ,hr-blue))))
 
 ;;;;; line-number (Emacs 26.1 and above)
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
@@ -189,7 +217,15 @@
    `(company-tooltip-selection                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
 
 ;;;;; flycheck
-   ;;..
+   `(flycheck-error                           ((t :underline (:color ,hr-red       :style wave))))
+   `(flycheck-info                            ((t :underline (:color ,hr-cyan      :style wave))))
+   `(flycheck-warning                         ((t :underline (:color ,hr-orange    :style wave))))
+   `(flycheck-fringe-error                    ((t (:foreground ,hr-red))))
+   `(flycheck-fringe-info                     ((t (:foreground ,hr-cyan))))
+   `(flycheck-fringe-warning                  ((t (:foreground ,hr-orange))))
+
+;;;;; ido-vertical-mode
+   `(ido-vertical-match-face                  ((t (:foreground ,hr-yellow                              :weight bold :underline t))))
 
 ;;;;; rainbow-delimiters
    ;;..
@@ -206,9 +242,18 @@
    `(telephone-line-evil-motion               ((t (:foreground ,hr-black     :background ,hr-cyan))))
    `(telephone-line-evil-emacs                ((t (:foreground ,hr-black     :background ,hr-magenta))))
    `(telephone-line-projectile                ((t (:foreground ,hr-fg))))
+   `(telephone-line-warning                   ((t (:foreground ,hr-orange                              :weight normal))))
 
 ;;;;; which-key
-   ;;..
+   `(which-key-command-description-face       ((t (:foreground ,hr-blue))))
+   `(which-key-docstring-face                 ((t (:foreground ,hr-white+6))))
+   `(which-key-group-description-face         ((t (:foreground ,hr-orange))))
+   `(which-key-highlighted-command-face       ((t (:foreground ,hr-blue))))
+   `(which-key-key-face                       ((t (:foreground ,hr-yellow))))
+   `(which-key-local-map-description-face     ((t (:foreground ,hr-blue))))
+   `(which-key-note-face                      ((t (:foreground ,hr-white+6))))
+   `(which-key-separator-face                 ((t (:foreground ,hr-white+6))))
+   `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))
 
    ))
 
