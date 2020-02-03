@@ -26,8 +26,10 @@
 ;; - avy
 ;; - centaur-tabs(?)
 ;; - company-mode
+;; - evil
 ;; - flycheck
 ;; - ido-vertical-mode
+;; - rainbow-delimiters
 ;; - neotree
 ;; - telephone-line
 ;; - which-key
@@ -135,7 +137,6 @@
    `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(region                                   ((t (                          :background ,hr-black-6))))
    `(secondary-selection                      ((t (                          :background ,hr-black-3))))
-   `(trailing-whitespace                      ((t (                          :background ,hr-red))))
    `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
 
 ;;;;; font lock
@@ -183,7 +184,18 @@
    `(show-paren-mismatch                      ((t (:foreground ,hr-white+1   :background ,hr-red       :weight bold))))
 
 ;;;;; whitespace-mode
-   ;;..
+   `(trailing-whitespace                      ((t (:foreground ,hr-black-6   :background ,hr-orange))))
+   `(whitespace-big-indent                    ((t (:foreground ,hr-black-6   :background ,hr-red))))
+   `(whitespace-empty                         ((t (:foreground ,hr-black-6   :background ,hr-yellow))))
+   `(whitespace-hspace                        ((t (:foreground ,hr-white+5   :background ,hr-black-6))))
+   `(whitespace-indentation                   ((t (:foreground ,hr-white+5   :background ,hr-black-6))))
+   `(whitespace-line                          ((t (:foreground ,hr-orange    :background ,hr-black-6))))
+   `(whitespace-newline                       ((t (:foreground ,hr-white+5   :background ,hr-bg))))
+   `(whitespace-space                         ((t (:foreground ,hr-white+5   :background ,hr-black-6))))
+   `(whitespace-space-after-tab               ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(whitespace-space-before-tab              ((t (:foreground ,hr-orange    :background ,hr-black-6))))
+   `(whitespace-tab                           ((t (:foreground ,hr-white+5   :background ,hr-black-6))))
+   `(whitespace-trailing                      ((t (:foreground ,hr-black-6   :background ,hr-orange))))
 
 ;;;; --- Third-party ---
 
@@ -217,6 +229,13 @@
    `(company-tooltip-mouse                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
    `(company-tooltip-selection                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
 
+;;;;; evil
+   `(evil-ex-info                             ((t (:foreground ,hr-red))))
+   `(evil-ex-lazy-highlight                   ((t (                                                    :inherit lazy-highlight))))
+   `(evil-ex-search                           ((t (                                                    :inherit isearch))))
+   `(evil-ex-substitute-replacement           ((t (:foreground ,hr-red                                 :underline t))))
+   `(evil-ex-substitute-matches               ((t (                                                    :inherit isearch))))
+
 ;;;;; flycheck
    `(flycheck-error                           ((t :underline (:color ,hr-red       :style wave))))
    `(flycheck-info                            ((t :underline (:color ,hr-cyan      :style wave))))
@@ -229,7 +248,17 @@
    `(ido-vertical-match-face                  ((t (:foreground ,hr-yellow                              :weight bold :underline t))))
 
 ;;;;; rainbow-delimiters
-   ;;..
+   `(rainbow-delimiters-depth-1-face          ((t (:foreground ,hr-fg))))
+   `(rainbow-delimiters-depth-2-face          ((t (:foreground ,hr-cyan))))
+   `(rainbow-delimiters-depth-3-face          ((t (:foreground ,hr-yellow))))
+   `(rainbow-delimiters-depth-4-face          ((t (:foreground ,hr-green+1))))
+   `(rainbow-delimiters-depth-5-face          ((t (:foreground ,hr-blue))))
+   `(rainbow-delimiters-depth-6-face          ((t (:foreground ,hr-fg))))
+   `(rainbow-delimiters-depth-7-face          ((t (:foreground ,hr-cyan))))
+   `(rainbow-delimiters-depth-8-face          ((t (:foreground ,hr-yellow))))
+   `(rainbow-delimiters-depth-9-face          ((t (:foreground ,hr-green+1))))
+   `(rainbow-delimiters-depth-10-face         ((t (:foreground ,hr-blue))))
+   `(rainbow-delimiters-unmatched-face        ((t (:foreground ,hr-red))))
 
 ;;;;; neotree
    `(neo-banner-face                          ((t (:foreground ,hr-orange                              :weight bold))))
