@@ -24,7 +24,7 @@
 ;;
 ;; Supported packages:
 ;; - avy
-;; - centaur-tabs(?)
+;; - centaur-tabs
 ;; - company-mode
 ;; - evil
 ;; - flycheck
@@ -173,6 +173,7 @@
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-1   :weight bold))))
 
 ;;;;; mode-line
+   `(header-line                              ((t (                          :background ,hr-black-3))))
    `(mode-line                                ((t (:foreground ,hr-fg        :background ,hr-black-3))))
    `(mode-line-inactive                       ((t (:foreground ,hr-black-8   :background ,hr-black-3))))
 
