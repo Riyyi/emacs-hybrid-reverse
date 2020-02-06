@@ -1,3 +1,5 @@
+[[http://www.gnu.org/licenses/gpl-3.0.txt][https://img.shields.io/badge/license-GPL%203-green.svg]]
+
 * Hybrid Reverse theme for Emacs
 
-Material color scheme for Emacs based on kristijanhusak/vim-hybrid-material color scheme.
+Material color scheme for Emacs based on [[https://github.com/kristijanhusak/vim-hybrid-material#hybrid-reverse][kristijanhusak/vim-hybrid-material]] color scheme.
