@@ -126,6 +126,7 @@
    `(warning                                  ((t (:foreground ,hr-orange                              :weight bold))))
 
 ;;;;; UI
+   `(border                                   ((t (:foreground ,hr-white+5))))
    `(custom-group-tag                         ((t (:foreground ,hr-blue))))
    `(custom-state                             ((t (:foreground ,hr-green))))
    `(custom-variable-tag                      ((t (:foreground ,hr-blue))))
@@ -138,6 +139,9 @@
    `(region                                   ((t (                          :background ,hr-black-6))))
    `(secondary-selection                      ((t (                          :background ,hr-black-3))))
    `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
+   `(window-divider                           ((t (:foreground ,hr-white+5))))
+   `(window-divider-first-pixel               ((t (:foreground ,hr-black-6))))
+   `(window-divider-last-pixel                ((t (:foreground ,hr-black-6))))
 
 ;;;;; font lock
    `(font-lock-builtin-face                   ((t (:foreground ,hr-blue))))
@@ -175,7 +179,10 @@
 ;;;;; mode-line
    `(header-line                              ((t (                          :background ,hr-black-3))))
    `(mode-line                                ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(mode-line-buffer-id                      ((t (:foreground ,hr-fg        :background ,hr-black-5))))
+   `(mode-line-emphasis                       ((t (:foreground ,hr-fg        :background ,hr-black-5))))
    `(mode-line-inactive                       ((t (:foreground ,hr-black-8   :background ,hr-black-3))))
+   `(mode-line-highlight                      ((t (                                                    :inherit highlight))))
 
 ;;;;; org-mode
    `(org-agenda-structure                     ((t (:foreground ,hr-magenta))))
