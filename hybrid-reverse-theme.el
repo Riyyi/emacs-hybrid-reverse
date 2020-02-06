@@ -172,6 +172,10 @@
    `(lazy-highlight                           ((t (:foreground ,hr-bg        :background ,hr-white+5))))
    `(match                                    ((t (:foreground ,hr-bg        :background ,hr-blue))))
 
+;;;;; sh-mode
+  `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
+  `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
+
 ;;;;; line-number (Emacs 26.1 and above)
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-1   :weight bold))))
