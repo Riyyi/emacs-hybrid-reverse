@@ -26,6 +26,7 @@
 ;; - avy
 ;; - centaur-tabs
 ;; - company-mode
+;; - elfeed
 ;; - evil
 ;; - flycheck
 ;; - ido-vertical-mode
@@ -180,6 +181,12 @@
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-1   :weight bold))))
 
+;;; message-mode
+   `(message-header-name                      ((t (:foreground ,hr-blue))))
+   `(message-header-subject                   ((t (:foreground ,hr-green                               :weight bold))))
+   `(message-header-to                        ((t (:foreground ,hr-green))))
+   `(message-header-other                     ((t (:foreground ,hr-fg))))
+
 ;;;;; mode-line
    `(header-line                              ((t (                          :background ,hr-black-3))))
    `(mode-line                                ((t (:foreground ,hr-fg        :background ,hr-black-3))))
@@ -289,6 +296,14 @@
    `(company-tooltip-common-selection         ((t (:foreground ,hr-bg        :background ,hr-yellow))))
    `(company-tooltip-mouse                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
    `(company-tooltip-selection                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+
+;;;;; elfeed
+   `(elfeed-log-error-level-face              ((t (:foreground ,hr-red))))
+   `(elfeed-log-info-level-face               ((t (:foreground ,hr-blue))))
+   `(elfeed-log-warn-level-face               ((t (:foreground ,hr-yellow))))
+   `(elfeed-search-date-face                  ((t (:foreground ,hr-blue))))
+   `(elfeed-search-feed-face                  ((t (:foreground ,hr-cyan))))
+   `(elfeed-search-tag-face                   ((t (:foreground ,hr-green))))
 
 ;;;;; evil
    `(evil-ex-info                             ((t (:foreground ,hr-red))))
