@@ -136,6 +136,7 @@
    `(fringe                                   ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(highlight                                ((t (:foreground ,hr-yellow    :background ,hr-bg))))
    `(highlight-changes                        ((t (:foreground ,hr-red       :background ,hr-bg))))
+   `(hl-line                                  ((t (                          :background ,hr-black-3))))
    `(link                                     ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(link-visited                             ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
