@@ -174,8 +174,8 @@
    `(match                                    ((t (:foreground ,hr-bg        :background ,hr-blue))))
 
 ;;;;; sh-mode
-  `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
-  `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
+   `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
+   `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
 
 ;;;;; line-number (Emacs 26.1 and above)
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
