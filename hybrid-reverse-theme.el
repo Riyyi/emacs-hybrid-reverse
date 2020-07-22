@@ -379,6 +379,11 @@
    `(which-key-separator-face                 ((t (:foreground ,hr-white+6))))
    `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))))
 
+;;;###autoload
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
+
 (provide-theme 'hybrid-reverse)
 
 ;;; hybrid-reverse-theme.el ends here
