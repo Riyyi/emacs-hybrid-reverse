@@ -377,9 +377,7 @@
    `(which-key-local-map-description-face     ((t (:foreground ,hr-blue))))
    `(which-key-note-face                      ((t (:foreground ,hr-white+6))))
    `(which-key-separator-face                 ((t (:foreground ,hr-white+6))))
-   `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))
-
-   ))
+   `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))))
 
 (provide-theme 'hybrid-reverse)
 
