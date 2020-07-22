@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; A port of the Vim theme Hybrid Reverse for Emacs 24+.
+;; A port of the Vim theme Hybrid Reverse for Emacs 24.1+.
 ;;
 ;; Supported packages:
 ;; - avy
@@ -51,8 +51,10 @@
 
 ;;; Code:
 
-(unless (>= emacs-major-version 24)
-  (error "Hybrid Reverse theme requires Emacs 24 or later!"))
+(unless (or (> emacs-major-version 24)
+			(and (= emacs-major-version 24)
+				 (>= emacs-minor-version 1)))
+  (error "Hybrid Reverse theme requires Emacs 24.1 or later!"))
 
 (deftheme hybrid-reverse "The Hybrid Reverse color theme")
 
