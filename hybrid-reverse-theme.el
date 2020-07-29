@@ -30,8 +30,9 @@
 ;; - evil
 ;; - flycheck
 ;; - ido-vertical-mode
-;; - rainbow-delimiters
 ;; - neotree
+;; - php-mode
+;; - rainbow-delimiters
 ;; - telephone-line
 ;; - which-key
 
@@ -326,19 +327,6 @@
 ;;;;; ido-vertical-mode
    `(ido-vertical-match-face                  ((t (:foreground ,hr-yellow                              :weight bold :underline t))))
 
-;;;;; rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face          ((t (:foreground ,hr-fg))))
-   `(rainbow-delimiters-depth-2-face          ((t (:foreground ,hr-cyan))))
-   `(rainbow-delimiters-depth-3-face          ((t (:foreground ,hr-yellow))))
-   `(rainbow-delimiters-depth-4-face          ((t (:foreground ,hr-green+1))))
-   `(rainbow-delimiters-depth-5-face          ((t (:foreground ,hr-blue))))
-   `(rainbow-delimiters-depth-6-face          ((t (:foreground ,hr-fg))))
-   `(rainbow-delimiters-depth-7-face          ((t (:foreground ,hr-cyan))))
-   `(rainbow-delimiters-depth-8-face          ((t (:foreground ,hr-yellow))))
-   `(rainbow-delimiters-depth-9-face          ((t (:foreground ,hr-green+1))))
-   `(rainbow-delimiters-depth-10-face         ((t (:foreground ,hr-blue))))
-   `(rainbow-delimiters-unmatched-face        ((t (:foreground ,hr-red))))
-
 ;;;;; neotree
    `(neo-banner-face                          ((t (:foreground ,hr-orange                              :weight bold))))
    `(neo-button-face                          ((t (                                                    :underline t))))
@@ -356,6 +344,51 @@
    `(neo-vc-needs-merge-face                  ((t (:foreground ,hr-red))))
    `(neo-vc-unlocked-changes-face             ((t (:foreground ,hr-orange                              :slant italic))))
    `(neo-vc-user-face                         ((t (:foreground ,hr-red                                 :slant italic))))
+
+;;;;; php-mode
+   `(php-$this                                ((t (:foreground ,hr-red))))
+   `(php-$this-sigil                          ((t (:foreground ,hr-cyan))))
+   `(php-class-declaration                    ((t (:foreground ,hr-cyan))))
+   `(php-class-declaration-spec               ((t (:foreground ,hr-cyan))))
+   `(php-class-modifier                       ((t (:foreground ,hr-cyan))))
+   `(php-constant                             ((t (:foreground ,hr-magenta))))
+   `(php-doc-$this                            ((t (:foreground ,hr-red))))
+   `(php-doc-$this-sigil                      ((t (:foreground ,hr-cyan ))))
+   `(php-doc-variable-sigil                   ((t (:foreground ,hr-cyan))))
+   `(php-errorcontrol-op                      ((t (:foreground ,hr-fg))))
+   `(php-function-call                        ((t (:foreground ,hr-fg))))
+   `(php-function-name                        ((t (:foreground ,hr-fg))))
+   `(php-import-declaration                   ((t (:foreground ,hr-cyan))))
+   `(php-keyword                              ((t (:foreground ,hr-blue))))
+   `(php-magical-constant                     ((t (:foreground ,hr-magenta))))
+   `(php-namespace-declaration                ((t (:foreground ,hr-cyan))))
+   `(php-operator                             ((t (:foreground ,hr-blue))))
+   `(php-paamayim-nekudotayim                 ((t (:foreground ,hr-cyan))))
+   `(php-php-tag                              ((t (:foreground ,hr-red))))
+   `(php-property-name                        ((t (:foreground ,hr-fg))))
+   `(php-variable-name                        ((t (:foreground ,hr-red))))
+   `(php-variable-sigil                       ((t (:foreground ,hr-cyan))))
+   ;; These are defined but not yet implemented by php-mode
+   `(php-builtin                              ((t (:foreground ,hr-yellow))))
+   `(php-constant-assign                      ((t (:foreground ,hr-fg))))
+   `(php-control-structure                    ((t (:foreground ,hr-blue))))
+   `(php-doc-annotation-tag                   ((t (:foreground ,hr-cyan))))
+   `(php-doc-class-name                       ((t (:foreground ,hr-orange))))
+   `(php-method-modifier                      ((t (:foreground ,hr-orange))))
+   `(php-visibility-modifier                  ((t (:foreground ,hr-orange))))
+
+;;;;; rainbow-delimiters
+   `(rainbow-delimiters-depth-1-face          ((t (:foreground ,hr-fg))))
+   `(rainbow-delimiters-depth-2-face          ((t (:foreground ,hr-cyan))))
+   `(rainbow-delimiters-depth-3-face          ((t (:foreground ,hr-yellow))))
+   `(rainbow-delimiters-depth-4-face          ((t (:foreground ,hr-green+1))))
+   `(rainbow-delimiters-depth-5-face          ((t (:foreground ,hr-blue))))
+   `(rainbow-delimiters-depth-6-face          ((t (:foreground ,hr-fg))))
+   `(rainbow-delimiters-depth-7-face          ((t (:foreground ,hr-cyan))))
+   `(rainbow-delimiters-depth-8-face          ((t (:foreground ,hr-yellow))))
+   `(rainbow-delimiters-depth-9-face          ((t (:foreground ,hr-green+1))))
+   `(rainbow-delimiters-depth-10-face         ((t (:foreground ,hr-blue))))
+   `(rainbow-delimiters-unmatched-face        ((t (:foreground ,hr-red))))
 
 ;;;;; telephone-line
    `(telephone-line-accent-active             ((t (:foreground ,hr-fg        :background ,hr-black-5))))
