@@ -368,8 +368,9 @@
    `(php-property-name                        ((t (:foreground ,hr-fg))))
    `(php-variable-name                        ((t (:foreground ,hr-red))))
    `(php-variable-sigil                       ((t (:foreground ,hr-cyan))))
-   ;; These are defined but not yet implemented by php-mode
+   ;; These are declared but not yet implemented by php-mode
    `(php-builtin                              ((t (:foreground ,hr-yellow))))
+   `(php-class                                ((t (:foreground ,hr-fg))))
    `(php-constant-assign                      ((t (:foreground ,hr-fg))))
    `(php-control-structure                    ((t (:foreground ,hr-blue))))
    `(php-doc-annotation-tag                   ((t (:foreground ,hr-cyan))))
