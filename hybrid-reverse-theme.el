@@ -65,13 +65,13 @@
 
 ;;; Color Palette
 
-(let ((class '((class color) (min-colors 89)))
+(let ((_class '((class color) (min-colors 89)))
 	  (hr-white      "#ffffff") ; grey100
 	  (hr-white+1    "#e4e4e4") ; grey90~
-	  (hr-white+2    "#d0d0d0") ; grey82~
-	  (hr-white+3    "#cccccc") ; grey80
+	  (_hr-white+2    "#d0d0d0") ; grey82~
+	  (_hr-white+3    "#cccccc") ; grey80
 	  (hr-fg         "#c5c8c6")
-	  (hr-white+4    "#bcbcbc") ; grey74~
+	  (_hr-white+4    "#bcbcbc") ; grey74~
 	  (hr-white+5    "#9e9e9e") ; grey62
 	  (hr-white+6    "#707880")
 	  ;; ----------------------
@@ -79,39 +79,39 @@
 	  (hr-black-7    "#5f5f5f") ; grey37~
 	  (hr-black-6    "#373b41")
 	  (hr-black-5    "#383838") ; grey22
-	  (hr-black-4    "#303030") ; grey19
+	  (_hr-black-4    "#303030") ; grey19
 	  (hr-black-3    "#282a2e")
-	  (hr-black-2    "#1d1f21")
+	  (_hr-black-2    "#1d1f21")
 	  (hr-black-1    "#212121") ; grey13 ; Added
 	  (hr-bg         "#1c1c1c") ; grey11
 	  (hr-black      "#000000") ; grey0
 	  ;; ----------------------
-	  (hr-red-1      "#ffd7d7")
+	  (_hr-red-1      "#ffd7d7")
 	  (hr-red        "#cc6666")
 	  (hr-red+1      "#a54242") ; Added
-	  (hr-red+2      "#5f0000")
+	  (_hr-red+2      "#5f0000")
 	  ;; ----------------------
 	  (hr-orange     "#de935f")
-	  (hr-orange+1   "#875f00")
+	  (_hr-orange+1   "#875f00")
 	  ;; ----------------------
 	  (hr-yellow     "#f0c674")
-	  (hr-yellow+1   "#5f5f00")
+	  (_hr-yellow+1   "#5f5f00")
 	  ;; ----------------------
-	  (hr-green-1    "#d7ffd7")
+	  (_hr-green-1    "#d7ffd7")
 	  (hr-green      "#b5bd68")
 	  (hr-green+1    "#5f875f")
-	  (hr-green+2    "#005f00")
+	  (_hr-green+2    "#005f00")
 	  ;; ----------------------
 	  (hr-cyan       "#8abeb7")
-	  (hr-cyan+1     "#005f5f")
+	  (_hr-cyan+1     "#005f5f")
 	  ;; ----------------------
-	  (hr-blue-1     "#d7d7ff")
+	  (_hr-blue-1     "#d7d7ff")
 	  (hr-blue       "#81a2be")
 	  (hr-blue+1     "#5f5f87")
-	  (hr-blue+2     "#00005f")
+	  (_hr-blue+2     "#00005f")
 	  ;; ----------------------
 	  (hr-magenta    "#b294bb")
-	  (hr-magenta+1  "#5f005f"))
+	  (_hr-magenta+1  "#5f005f"))
 
 ;;; Theme Faces
 
@@ -422,5 +422,7 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'hybrid-reverse)
+
+(provide 'hybrid-reverse-theme)
 
 ;;; hybrid-reverse-theme.el ends here
