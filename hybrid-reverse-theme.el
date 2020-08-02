@@ -25,6 +25,7 @@
 ;; Supported packages:
 ;; - avy
 ;; - centaur-tabs
+;; - column-enforce-mode
 ;; - company-mode
 ;; - elfeed
 ;; - evil
@@ -287,6 +288,9 @@
    `(centaur-tabs-selected-modified           ((t (:foreground ,hr-white     :background ,hr-black-6))))
    `(centaur-tabs-unselected                  ((t (:foreground ,hr-fg        :background ,hr-black-3))))
    `(centaur-tabs-unselected-modified         ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+
+;;;;; column-enforce-mode
+   `(column-enforce-face                      ((t (:foreground ,hr-orange    :background ,hr-black-6))))
 
 ;;;;; company-mode
    `(company-preview                          ((t (                          :background ,hr-black-3))))
