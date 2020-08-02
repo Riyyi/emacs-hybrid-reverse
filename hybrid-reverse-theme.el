@@ -34,6 +34,7 @@
 ;; - neotree
 ;; - php-mode
 ;; - rainbow-delimiters
+;; - selectrum
 ;; - telephone-line
 ;; - which-key
 
@@ -394,6 +395,11 @@
    `(rainbow-delimiters-depth-9-face          ((t (:foreground ,hr-green+1))))
    `(rainbow-delimiters-depth-10-face         ((t (:foreground ,hr-blue))))
    `(rainbow-delimiters-unmatched-face        ((t (:foreground ,hr-red))))
+
+;;;;; selectrum
+   `(selectrum-current-candidate              ((t (:foreground ,hr-orange                              :weight bold))))
+   `(selectrum-primary-highlight              ((t (:foreground ,hr-blue))))
+   `(selectrum-secondary-highlight            ((t (:foreground ,hr-red))))
 
 ;;;;; telephone-line
    `(telephone-line-accent-active             ((t (:foreground ,hr-fg        :background ,hr-black-5))))
