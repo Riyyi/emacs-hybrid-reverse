@@ -177,11 +177,10 @@
    `(lazy-highlight                           ((t (:foreground ,hr-bg        :background ,hr-white+5))))
    `(match                                    ((t (:foreground ,hr-bg        :background ,hr-blue))))
 
-;;;;; sh-mode
-   `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
-   `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
+;;;;; linum-mode
+   `(linum                                    ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
 
-;;;;; line-number (Emacs 26.1 and above)
+;;;;; display-line-number-mode (Emacs >=26.1)
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-1   :weight bold))))
 
@@ -250,6 +249,10 @@
    `(outline-6                                ((t (:foreground ,hr-green))))
    `(outline-7                                ((t (:foreground ,hr-blue))))
    `(outline-8                                ((t (:foreground ,hr-yellow))))
+
+;;;;; sh-mode
+   `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
+   `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
 
 ;;;;; show-paren
    `(show-paren-match                         ((t (:foreground ,hr-cyan      :background ,hr-blue+1    :weight bold))))
