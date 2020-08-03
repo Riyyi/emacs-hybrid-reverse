@@ -31,6 +31,7 @@
 ;; - evil
 ;; - flycheck
 ;; - ido-vertical-mode
+;; - lsp-ui
 ;; - neotree
 ;; - php-mode
 ;; - rainbow-delimiters
@@ -332,6 +333,24 @@
 
 ;;;;; ido-vertical-mode
    `(ido-vertical-match-face                  ((t (:foreground ,hr-yellow                              :weight bold :underline t))))
+
+;;;;; lsp-ui
+   `(lsp-ui-doc-background                    ((t (                          :background ,hr-black-3))))
+   `(lsp-ui-doc-border                        ((t (                                                    :inherit border))))
+   `(lsp-ui-doc-header                        ((t (:foreground ,hr-bg        :background ,hr-blue))))
+   `(lsp-ui-doc-url                           ((t (:foreground ,hr-blue      :background ,hr-black-3))))
+   `(lsp-ui-peek-filename                     ((t (:foreground ,hr-magenta))))
+   `(lsp-ui-peek-footer                       ((t (:foreground ,hr-bg        :background ,hr-black-3))))
+   `(lsp-ui-peek-header                       ((t (:foreground ,hr-fg        :background ,hr-black-6))))
+   `(lsp-ui-peek-highlight                    ((t (:foreground ,hr-blue      :background ,hr-black-3))))
+   `(lsp-ui-peek-line-number                  ((t (                          :background ,hr-black-3   :inherit line-number))))
+   `(lsp-ui-peek-list                         ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(lsp-ui-peek-peek                         ((t (                          :background ,hr-black-3))))
+   `(lsp-ui-peek-selection                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(lsp-ui-sideline-code-action              ((t (:foreground ,hr-blue                                :weight bold))))
+   `(lsp-ui-sideline-current-symbol           ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(lsp-ui-sideline-symbol                   ((t (:foreground ,hr-red       :background ,hr-bg))))
+   `(lsp-ui-sideline-symbol-info              ((t (:foreground ,hr-cyan      :background ,hr-bg))))
 
 ;;;;; neotree
    `(neo-banner-face                          ((t (:foreground ,hr-orange                              :weight bold))))
