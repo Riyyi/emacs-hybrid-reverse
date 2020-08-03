@@ -54,9 +54,7 @@
 
 ;;; Code:
 
-(unless (or (> emacs-major-version 24)
-			(and (= emacs-major-version 24)
-				 (>= emacs-minor-version 1)))
+(when (version< emacs-version "24.1")
   (error "Hybrid Reverse theme requires Emacs 24.1 or later!"))
 
 (deftheme hybrid-reverse "The Hybrid Reverse color theme")
