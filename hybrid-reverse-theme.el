@@ -38,6 +38,7 @@
 ;; - rainbow-delimiters
 ;; - selectrum
 ;; - telephone-line
+;; - transient
 ;; - which-key
 
 ;;; References:
@@ -435,6 +436,23 @@
    `(telephone-line-evil-emacs                ((t (:foreground ,hr-black     :background ,hr-magenta))))
    `(telephone-line-projectile                ((t (:foreground ,hr-fg))))
    `(telephone-line-warning                   ((t (:foreground ,hr-orange                              :weight normal))))
+
+;;;;; transient
+   `(transient-active-infix                   ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(transient-argument                       ((t (:foreground ,hr-orange                              :weight bold))))
+   `(transient-disabled-suffix                ((t (:foreground ,hr-bg        :background ,hr-red       :weight bold))))
+   `(transient-enabled-suffix                 ((t (:foreground ,hr-bg        :background ,hr-green     :weight bold))))
+   `(transient-heading                        ((t (:foreground ,hr-blue))))
+   `(transient-inactive-argument              ((t (:foreground ,hr-blue))))
+   `(transient-inactive-value                 ((t (:foreground ,hr-blue))))
+   `(transient-inapt-suffix                   ((t (:foreground ,hr-fg))))
+   `(transient-key                            ((t (:foreground ,hr-yellow))))
+   `(transient-mismatched-key                 ((t (:foreground ,hr-fg                                  :underline t))))
+   `(transient-nonstandard-key                ((t (:foreground ,hr-fg                                  :underline t))))
+   `(transient-separator                      ((t (:foreground ,hr-fg        :background ,hr-black-6))))
+   `(transient-unreachable                    ((t (:foreground ,hr-fg))))
+   `(transient-unreachable-key                ((t (:foreground ,hr-fg))))
+   `(transient-value                          ((t (:foreground ,hr-magenta))))
 
 ;;;;; which-key
    `(which-key-command-description-face       ((t (:foreground ,hr-blue))))
