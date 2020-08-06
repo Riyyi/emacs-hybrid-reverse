@@ -27,7 +27,7 @@ Now you can activate the theme:
 
 Hybrid Reverse is available on [[https://melpa.org/][MELPA]]:
 
-1. add [[https://melpa.org/#/getting-started/][MELPA]] as a package source
+1. add [[https://melpa.org/#/getting-started][MELPA]] as a package source
 2. press @@html:<kbd>@@M-x@@html:</kbd>@@
 3. type =package-install= and confirm with @@html:<kbd>@@↲@@html:</kbd>@@
 4. type =hybrid-reverse-theme= and confirm with @@html:<kbd>@@↲@@html:</kbd>@@
