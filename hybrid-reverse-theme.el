@@ -130,7 +130,7 @@
    ;; Basic default face
    `(default                                  ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(escape-glyph                             ((t (:foreground ,hr-cyan))))
-   `(error                                    ((t (:foreground ,hr-red       :background ,hr-bg))))
+   `(error                                    ((t (:foreground ,hr-red       :background ,hr-bg        :weight bold))))
    `(success                                  ((t (:foreground ,hr-green                               :weight bold))))
    `(warning                                  ((t (:foreground ,hr-orange                              :weight bold))))
 
@@ -555,15 +555,17 @@
 ;;;;; telephone-line
    `(telephone-line-accent-active             ((t (:foreground ,hr-fg        :background ,hr-black-5))))
    `(telephone-line-accent-inactive           ((t (:foreground ,hr-black-8   :background ,hr-black-3))))
+   `(telephone-line-error                     ((t (                                                    :inherit error))))
    `(telephone-line-evil                      ((t (                                                    :weight normal))))
-   `(telephone-line-evil-normal               ((t (:foreground ,hr-black     :background ,hr-blue))))
-   `(telephone-line-evil-insert               ((t (:foreground ,hr-black     :background ,hr-green))))
-   `(telephone-line-evil-visual               ((t (:foreground ,hr-black     :background ,hr-magenta))))
-   `(telephone-line-evil-replace              ((t (:foreground ,hr-white     :background ,hr-black-3))))
-   `(telephone-line-evil-operator             ((t (:foreground ,hr-black     :background ,hr-orange))))
-   `(telephone-line-evil-motion               ((t (:foreground ,hr-black     :background ,hr-cyan))))
-   `(telephone-line-evil-emacs                ((t (:foreground ,hr-black     :background ,hr-magenta))))
+   `(telephone-line-evil-normal               ((t (:foreground ,hr-black     :background ,hr-blue      :inherit telephone-line-evil))))
+   `(telephone-line-evil-insert               ((t (:foreground ,hr-black     :background ,hr-green     :inherit telephone-line-evil))))
+   `(telephone-line-evil-visual               ((t (:foreground ,hr-black     :background ,hr-magenta   :inherit telephone-line-evil))))
+   `(telephone-line-evil-replace              ((t (:foreground ,hr-white     :background ,hr-black-3   :inherit telephone-line-evil))))
+   `(telephone-line-evil-operator             ((t (:foreground ,hr-black     :background ,hr-orange    :inherit telephone-line-evil))))
+   `(telephone-line-evil-motion               ((t (:foreground ,hr-black     :background ,hr-cyan      :inherit telephone-line-evil))))
+   `(telephone-line-evil-emacs                ((t (:foreground ,hr-black     :background ,hr-magenta   :inherit telephone-line-evil))))
    `(telephone-line-projectile                ((t (:foreground ,hr-fg))))
+   `(telephone-line-unimportant               ((t (:foreground ,hr-white+6                             :inherit mode-line))))
    `(telephone-line-warning                   ((t (:foreground ,hr-orange                              :weight normal))))
 
 ;;;;; transient
