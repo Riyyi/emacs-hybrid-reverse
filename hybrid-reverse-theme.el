@@ -294,6 +294,9 @@
 
 ;;;;; centaur-tabs
    `(centaur-tabs-active-bar-face             ((t (:foreground ,hr-bg        :background ,hr-cyan))))
+   `(centaur-tabs-close-mouse-face            ((t (:foreground ,hr-orange                              :weight bold :underline t))))
+   `(centaur-tabs-close-selected              ((t (                                                    :inherit centaur-tabs-selected))))
+   `(centaur-tabs-close-unselected            ((t (                                                    :inherit centaur-tabs-unselected))))
    `(centaur-tabs-default                     ((t (:foreground ,hr-black-3   :background ,hr-black-3))))
    `(centaur-tabs-modified-marker-selected    ((t (:foreground ,hr-white     :background ,hr-black-6))))
    `(centaur-tabs-modified-marker-unselected  ((t (:foreground ,hr-fg        :background ,hr-black-3))))
