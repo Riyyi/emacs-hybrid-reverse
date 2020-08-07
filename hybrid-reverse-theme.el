@@ -34,6 +34,7 @@
 ;; - ido-vertical-mode
 ;; - lsp-ui
 ;; - magit
+;; - mu4e
 ;; - neotree
 ;; - php-mode
 ;; - rainbow-delimiters
@@ -189,10 +190,16 @@
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-1   :weight bold))))
 
 ;;; message-mode
-   `(message-header-name                      ((t (:foreground ,hr-blue))))
-   `(message-header-subject                   ((t (:foreground ,hr-green                               :weight bold))))
-   `(message-header-to                        ((t (:foreground ,hr-green))))
-   `(message-header-other                     ((t (:foreground ,hr-fg))))
+   `(message-cited-text                       ((t (:foreground ,hr-white+5))))
+   `(message-header-cc                        ((t (:foreground ,hr-red))))
+   `(message-header-name                      ((t (:foreground ,hr-blue                                :weight bold))))
+   `(message-header-newsgroups                ((t (:foreground ,hr-cyan))))
+   `(message-header-other                     ((t (:foreground ,hr-green))))
+   `(message-header-subject                   ((t (:foreground ,hr-green))))
+   `(message-header-to                        ((t (:foreground ,hr-red))))
+   `(message-header-xheader                   ((t (:foreground ,hr-yellow))))
+   `(message-mml                              ((t (:foreground ,hr-yellow))))
+   `(message-separator                        ((t (                                                    :inherit font-lock-comment-face))))
 
 ;;;;; mode-line
    `(header-line                              ((t (                          :background ,hr-black-3))))
@@ -433,6 +440,45 @@
    `(magit-signature-revoked                  ((t (:foreground ,hr-red+1))))
    `(magit-signature-untrusted                ((t (:foreground ,hr-cyan))))
    `(magit-tag                                ((t (:foreground ,hr-orange))))
+
+;;;;; mu4e
+   `(mu4e-attach-number-face                  ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(mu4e-cited-1-face                        ((t (:foreground ,hr-white+5                             :slant italic))))
+   `(mu4e-cited-2-face                        ((t (:foreground ,hr-white+6                             :slant italic))))
+   `(mu4e-cited-3-face                        ((t (:foreground ,hr-white+5                             :slant italic))))
+   `(mu4e-cited-4-face                        ((t (:foreground ,hr-white+6                             :slant italic))))
+   `(mu4e-cited-5-face                        ((t (:foreground ,hr-white+5                             :slant italic))))
+   `(mu4e-cited-6-face                        ((t (:foreground ,hr-white+6                             :slant italic))))
+   `(mu4e-cited-7-face                        ((t (:foreground ,hr-fg                                  :slant italic))))
+   `(mu4e-compose-header-face                 ((t (                                                    :inherit font-lock-comment-face))))
+   `(mu4e-compose-separator-face              ((t (                                                    :inherit font-lock-comment-face))))
+   `(mu4e-contact-face                        ((t (:foreground ,hr-red))))
+   `(mu4e-context-face                        ((t (:foreground ,hr-orange    :background ,hr-black-3))))
+   `(mu4e-draft-face                          ((t (:foreground ,hr-green))))
+   `(mu4e-flagged-face                        ((t (                                                    :inherit font-lock-constant-face))))
+   `(mu4e-footer-face                         ((t (                                                    :inherit font-lock-comment-face))))
+   `(mu4e-forwarded-face                      ((t (:foreground ,hr-blue))))
+   `(mu4e-header-face                         ((t (:foreground ,hr-fg))))
+   `(mu4e-header-highlight-face               ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(mu4e-header-key-face                     ((t (:foreground ,hr-blue                                :weight bold))))
+   `(mu4e-header-marks-face                   ((t (:foreground ,hr-orange                              :weight bold))))
+   `(mu4e-header-title-face                   ((t (:foreground ,hr-orange))))
+   `(mu4e-header-value-face                   ((t (:foreground ,hr-green))))
+   `(mu4e-highlight-face                      ((t (:foreground ,hr-yellow))))
+   `(mu4e-link-face                           ((t (                                                    :inherit link))))
+   `(mu4e-modeline-face                       ((t (                                                    :inherit mode-line))))
+   `(mu4e-moved-face                          ((t (:foreground ,hr-cyan))))
+   `(mu4e-ok-face                             ((t (:foreground ,hr-green                               :weight bold))))
+   `(mu4e-region-code                         ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(mu4e-replied-face                        ((t (:foreground ,hr-white+6))))
+   `(mu4e-special-header-value-face           ((t (:foreground ,hr-cyan))))
+   `(mu4e-system-face                         ((t (                                                    :inherit font-lock-comment-face))))
+   `(mu4e-title-face                          ((t (:foreground ,hr-orange                              :bold))))
+   `(mu4e-trashed-face                        ((t (:foreground ,hr-black-3                             :strike-through t))))
+   `(mu4e-unread-face                         ((t (:foreground ,hr-white+1                             :weight bold))))
+   `(mu4e-url-number-face                     ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(mu4e-view-body-face                      ((t (:background ,hr-bg))))
+   `(mu4e-warning-face                        ((t (                                                    :inherit warning))))
 
 ;;;;; neotree
    `(neo-banner-face                          ((t (:foreground ,hr-orange                              :weight bold))))
