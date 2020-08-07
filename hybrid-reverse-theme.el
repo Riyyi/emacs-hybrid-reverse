@@ -82,12 +82,12 @@
 	  ;; ----------------------
 	  (hr-black-8    "#656565") ; grey40~
 	  (hr-black-7    "#5f5f5f") ; grey37~
-	  (hr-black-6    "#373b41")
+	  (hr-black-6    "#373b41") ; grey24~
 	  (hr-black-5    "#383838") ; grey22
 	  (_hr-black-4    "#303030") ; grey19
-	  (hr-black-3    "#282a2e")
-	  (_hr-black-2    "#1d1f21")
-	  (hr-black-1    "#212121") ; grey13 ; Added
+	  (hr-black-3    "#282a2e") ; grey16~
+	  (hr-black-2    "#212121") ; grey13 ; Added
+	  (_hr-black-1    "#1d1f21") ; grey12
 	  (hr-bg         "#1c1c1c") ; grey11
 	  (hr-black      "#000000") ; grey0
 	  ;; ----------------------
@@ -183,11 +183,11 @@
    `(match                                    ((t (:foreground ,hr-bg        :background ,hr-blue))))
 
 ;;;;; linum-mode
-   `(linum                                    ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
+   `(linum                                    ((t (:foreground ,hr-white+5   :background ,hr-black-2))))
 
 ;;;;; display-line-number-mode (Emacs >=26.1)
-   `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-1))))
-   `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-1   :weight bold))))
+   `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-2))))
+   `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-2   :weight bold))))
 
 ;;; message-mode
    `(message-cited-text                       ((t (:foreground ,hr-white+5))))
@@ -371,12 +371,12 @@
    `(magit-branch-remote                      ((t (:foreground ,hr-cyan))))
    `(magit-branch-remote-head                 ((t (:foreground ,hr-cyan                                :box t))))
    `(magit-branch-upstream                    ((t (                                                    :slant italic))))
-   `(magit-diff-added                         ((t (:foreground ,hr-green     :background ,hr-black-1))))
+   `(magit-diff-added                         ((t (:foreground ,hr-green     :background ,hr-black-2))))
    `(magit-diff-added-highlight               ((t (:foreground ,hr-green     :background ,hr-black-3))))
    `(magit-diff-base                          ((t (:foreground ,hr-bg        :background ,hr-green))))
    `(magit-diff-base-highlight                ((t (:foreground ,hr-bg        :background ,hr-green))))
    `(magit-diff-conflict-heading              ((t (                                                    :inherit magit-diff-hunk-heading))))
-   `(magit-diff-context                       ((t (                          :background ,hr-black-1))))
+   `(magit-diff-context                       ((t (                          :background ,hr-black-2))))
    `(magit-diff-context-highlight             ((t (                          :background ,hr-black-3))))
    `(magit-diff-file-heading                  ((t (                          :background ,hr-bg        :weight bold))))
    `(magit-diff-file-heading-highlight        ((t (                          :background ,hr-black-3))))
@@ -389,7 +389,7 @@
    `(magit-diff-lines-heading                 ((t (:foreground ,hr-bg        :background ,hr-orange))))
    `(magit-diff-our                           ((t (                                                    :inherit magit-diff-removed))))
    `(magit-diff-our-highlight                 ((t (                                                    :inherit magit-diff-removed-highlight))))
-   `(magit-diff-removed                       ((t (:foreground ,hr-red       :background ,hr-black-1))))
+   `(magit-diff-removed                       ((t (:foreground ,hr-red       :background ,hr-black-2))))
    `(magit-diff-removed-highlight             ((t (:foreground ,hr-red       :background ,hr-black-3))))
    `(magit-diff-revision-summary              ((t (                                                    :inherit magit-diff-hunk-heading))))
    `(magit-diff-revision-summary-highlight    ((t (                                                    :inherit magit-diff-hunk-heading-highlight))))
