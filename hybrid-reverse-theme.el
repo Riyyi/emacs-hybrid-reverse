@@ -28,6 +28,7 @@
 ;; - centaur-tabs
 ;; - column-enforce-mode
 ;; - company-mode
+;; - dired
 ;; - elfeed
 ;; - evil
 ;; - flycheck
@@ -75,10 +76,10 @@
 	  (hr-white+1    "#e4e4e4") ; grey90~
 	  (_hr-white+2    "#d0d0d0") ; grey82~
 	  (_hr-white+3    "#cccccc") ; grey80
-	  (hr-fg         "#c5c8c6")
+	  (hr-fg         "#c5c8c6") ; grey78~
 	  (_hr-white+4    "#bcbcbc") ; grey74~
 	  (hr-white+5    "#9e9e9e") ; grey62
-	  (hr-white+6    "#707880")
+	  (hr-white+6    "#707880") ; grey46~
 	  ;; ----------------------
 	  (hr-black-8    "#656565") ; grey40~
 	  (hr-black-7    "#5f5f5f") ; grey37~
@@ -152,6 +153,17 @@
    `(window-divider                           ((t (:foreground ,hr-white+5))))
    `(window-divider-first-pixel               ((t (:foreground ,hr-black-6))))
    `(window-divider-last-pixel                ((t (:foreground ,hr-black-6))))
+
+;;;;; dired
+   `(dired-directory                          ((t (:foreground ,hr-magenta))))
+   `(dired-flagged                            ((t (:foreground ,hr-orange                              :weight bold))))
+   `(dired-header                             ((t (:foreground ,hr-orange))))
+   `(dired-ignored                            ((t (                                                    :inherit font-lock-comment-face))))
+   `(dired-mark                               ((t (:foreground ,hr-blue))))
+   `(dired-marked                             ((t (:foreground ,hr-white     :background ,hr-black-6))))
+   `(dired-perm-write                         ((t (                                                    :inherit font-lock-comment-delimiter-face))))
+   `(dired-symlink                            ((t (:foreground ,hr-cyan))))
+   `(dired-warning                            ((t (                                                    :inherit warning))))
 
 ;;;;; font lock
    `(font-lock-builtin-face                   ((t (:foreground ,hr-blue))))
@@ -462,7 +474,7 @@
    `(mu4e-footer-face                         ((t (                                                    :inherit font-lock-comment-face))))
    `(mu4e-forwarded-face                      ((t (:foreground ,hr-blue))))
    `(mu4e-header-face                         ((t (:foreground ,hr-fg))))
-   `(mu4e-header-highlight-face               ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(mu4e-header-highlight-face               ((t (                          :background ,hr-black-3))))
    `(mu4e-header-key-face                     ((t (:foreground ,hr-blue                                :weight bold))))
    `(mu4e-header-marks-face                   ((t (:foreground ,hr-orange                              :weight bold))))
    `(mu4e-header-title-face                   ((t (:foreground ,hr-orange))))
@@ -478,7 +490,7 @@
    `(mu4e-system-face                         ((t (                                                    :inherit font-lock-comment-face))))
    `(mu4e-title-face                          ((t (:foreground ,hr-orange                              :bold))))
    `(mu4e-trashed-face                        ((t (:foreground ,hr-black-3                             :strike-through t))))
-   `(mu4e-unread-face                         ((t (:foreground ,hr-white+1                             :weight bold))))
+   `(mu4e-unread-face                         ((t (:foreground ,hr-white                               :weight bold))))
    `(mu4e-url-number-face                     ((t (:foreground ,hr-yellow                              :weight bold))))
    `(mu4e-view-body-face                      ((t (:background ,hr-bg))))
    `(mu4e-warning-face                        ((t (                                                    :inherit warning))))
