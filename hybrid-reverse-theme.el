@@ -156,11 +156,11 @@
 
 ;;;;; dired
    `(dired-directory                          ((t (:foreground ,hr-magenta))))
-   `(dired-flagged                            ((t (:foreground ,hr-orange                              :weight bold))))
+   `(dired-flagged                            ((t (                                                    :inherit error))))
    `(dired-header                             ((t (:foreground ,hr-orange))))
    `(dired-ignored                            ((t (                                                    :inherit font-lock-comment-face))))
    `(dired-mark                               ((t (:foreground ,hr-blue))))
-   `(dired-marked                             ((t (:foreground ,hr-white     :background ,hr-black-6))))
+   `(dired-marked                             ((t (                                                    :inherit warning))))
    `(dired-perm-write                         ((t (                                                    :inherit font-lock-comment-delimiter-face))))
    `(dired-symlink                            ((t (:foreground ,hr-cyan))))
    `(dired-warning                            ((t (                                                    :inherit warning))))
@@ -437,7 +437,7 @@
    `(magit-reflog-reset                       ((t (:foreground ,hr-red))))
    `(magit-section-heading                    ((t (:foreground ,hr-yellow                              :weight bold))))
    `(magit-section-heading-selection          ((t (:foreground ,hr-orange                              :weight bold))))
-   `(magit-section-highlight                  ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(magit-section-highlight                  ((t (                          :background ,hr-black-3))))
    `(magit-section-secondary-heading          ((t (:foreground ,hr-fg                                  :weight bold))))
    `(magit-sequence-done                      ((t (                                                    :inherit magit-hash))))
    `(magit-sequence-drop                      ((t (:foreground ,hr-red))))
