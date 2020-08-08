@@ -28,7 +28,6 @@
 ;; - centaur-tabs
 ;; - column-enforce-mode
 ;; - company-mode
-;; - dired
 ;; - elfeed
 ;; - evil
 ;; - flycheck
@@ -43,6 +42,21 @@
 ;; - telephone-line
 ;; - transient
 ;; - which-key
+;;
+;; Supported defaults:
+;; - dired
+;; - display-line-numbers-mode
+;; - font-lock-mode
+;; - ido-mode
+;; - isearch
+;; - linum-mode
+;; - message-mode
+;; - mode-line
+;; - org-mode*
+;; - outline-mode
+;; - shell-script-mode
+;; - show-paren-mode
+;; - whitespace-mode
 
 ;;; References:
 
@@ -165,7 +179,7 @@
    `(dired-symlink                            ((t (:foreground ,hr-cyan))))
    `(dired-warning                            ((t (                                                    :inherit warning))))
 
-;;;;; font lock
+;;;;; font-lock-mode
    `(font-lock-builtin-face                   ((t (:foreground ,hr-blue))))
    `(font-lock-comment-face                   ((t (:foreground ,hr-white+6                             :slant italic))))
    `(font-lock-comment-delimiter-face         ((t (:foreground ,hr-white+6                             :slant italic))))
@@ -182,7 +196,7 @@
    `(font-lock-variable-name-face             ((t (:foreground ,hr-red))))
    `(font-lock-warning-face                   ((t (:foreground ,hr-red                                 :weight bold))))
 
-;;;;; ido
+;;;;; ido-mode
    `(ido-first-match                          ((t (:foreground ,hr-orange))))
    `(ido-indicator                            ((t (:foreground ,hr-red))))
    `(ido-only-match                           ((t (:foreground ,hr-green))))
@@ -197,7 +211,7 @@
 ;;;;; linum-mode
    `(linum                                    ((t (:foreground ,hr-white+5   :background ,hr-black-2))))
 
-;;;;; display-line-number-mode (Emacs >=26.1)
+;;;;; display-line-numbers-mode (Emacs >=26.1)
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-2))))
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-2   :weight bold))))
 
@@ -263,7 +277,7 @@
    `(org-upcoming-deadline                    ((t (:foreground ,hr-orange))))
    `(org-warning                              ((t (:foreground ,hr-red                                 :weight bold))))
 
-;;;;; outline
+;;;;; outline-mode
    `(outline-1                                ((t (:foreground ,hr-red))))
    `(outline-2                                ((t (:foreground ,hr-green))))
    `(outline-3                                ((t (:foreground ,hr-blue))))
@@ -273,12 +287,13 @@
    `(outline-7                                ((t (:foreground ,hr-blue))))
    `(outline-8                                ((t (:foreground ,hr-yellow))))
 
-;;;;; sh-mode
+;;;;; shell-script-mode
    `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
    `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
 
-;;;;; show-paren
+;;;;; show-paren-mode
    `(show-paren-match                         ((t (:foreground ,hr-cyan      :background ,hr-blue+1    :weight bold))))
+   `(show-paren-match-expression              ((t (                                                    :inherit show-paren-match))))
    `(show-paren-mismatch                      ((t (:foreground ,hr-white+1   :background ,hr-red       :weight bold))))
 
 ;;;;; whitespace-mode
