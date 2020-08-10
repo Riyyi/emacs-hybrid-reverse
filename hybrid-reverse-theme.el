@@ -28,6 +28,7 @@
 ;; - centaur-tabs
 ;; - column-enforce-mode
 ;; - company-mode
+;; - deft
 ;; - elfeed
 ;; - evil
 ;; - flycheck
@@ -347,6 +348,15 @@
    `(company-tooltip-common-selection         ((t (:foreground ,hr-bg        :background ,hr-yellow))))
    `(company-tooltip-mouse                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
    `(company-tooltip-selection                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+
+;;;;; deft
+   `(deft-filter-string-error-face            ((t (:inherit error))))
+   `(deft-filter-string-face                  ((t (:foreground ,hr-green))))
+   `(deft-header-face                         ((t (:foreground ,hr-blue                                :weight bold))))
+   `(deft-separator-face                      ((t (                                                    :inherit font-lock-comment-delimiter-face))))
+   `(deft-summary-face                        ((t (                                                    :inherit font-lock-comment-face))))
+   `(deft-time-face                           ((t (:foreground ,hr-magenta))))
+   `(deft-title-face                          ((t (:foreground ,hr-fg                                  :weight bold))))
 
 ;;;;; elfeed
    `(elfeed-log-error-level-face              ((t (:foreground ,hr-red))))
