@@ -254,6 +254,7 @@
    `(org-document-info-keyword                ((t (:foreground ,hr-blue))))
    `(org-document-title                       ((t (:foreground ,hr-green                               :weight bold))))
    `(org-done                                 ((t (:foreground ,hr-green))))
+   `(org-drawer                               ((t (:foreground ,hr-blue))))
    `(org-ellipsis                             ((t (:foreground ,hr-white+6))))
    `(org-footnote                             ((t (:foreground ,hr-cyan))))
    `(org-formula                              ((t (:foreground ,hr-red))))
@@ -352,11 +353,11 @@
 ;;;;; deft
    `(deft-filter-string-error-face            ((t (:inherit error))))
    `(deft-filter-string-face                  ((t (:foreground ,hr-green))))
-   `(deft-header-face                         ((t (:foreground ,hr-blue                                :weight bold))))
+   `(deft-header-face                         ((t (:foreground ,hr-orange                              :weight bold))))
    `(deft-separator-face                      ((t (                                                    :inherit font-lock-comment-delimiter-face))))
    `(deft-summary-face                        ((t (                                                    :inherit font-lock-comment-face))))
    `(deft-time-face                           ((t (:foreground ,hr-magenta))))
-   `(deft-title-face                          ((t (:foreground ,hr-green                               :weight bold))))
+   `(deft-title-face                          ((t (:foreground ,hr-blue                                :weight bold))))
 
 ;;;;; elfeed
    `(elfeed-log-error-level-face              ((t (:foreground ,hr-red))))
