@@ -356,7 +356,7 @@
    `(deft-separator-face                      ((t (                                                    :inherit font-lock-comment-delimiter-face))))
    `(deft-summary-face                        ((t (                                                    :inherit font-lock-comment-face))))
    `(deft-time-face                           ((t (:foreground ,hr-magenta))))
-   `(deft-title-face                          ((t (:foreground ,hr-fg                                  :weight bold))))
+   `(deft-title-face                          ((t (:foreground ,hr-green                               :weight bold))))
 
 ;;;;; elfeed
    `(elfeed-log-error-level-face              ((t (:foreground ,hr-red))))
