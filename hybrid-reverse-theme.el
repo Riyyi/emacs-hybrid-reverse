@@ -40,6 +40,7 @@
 ;; - php-mode
 ;; - rainbow-delimiters
 ;; - selectrum
+;; - spaceline
 ;; - telephone-line
 ;; - transient
 ;; - which-key
@@ -589,6 +590,22 @@
    `(selectrum-current-candidate              ((t (:foreground ,hr-orange                              :weight bold))))
    `(selectrum-primary-highlight              ((t (:foreground ,hr-blue))))
    `(selectrum-secondary-highlight            ((t (:foreground ,hr-red))))
+
+;;;;; spaceline
+   `(spaceline-evil-emacs                     ((t (:foreground ,hr-black     :background ,hr-magenta))))
+   `(spaceline-evil-insert                    ((t (:foreground ,hr-black     :background ,hr-green))))
+   `(spaceline-evil-motion                    ((t (:foreground ,hr-black     :background ,hr-cyan))))
+   `(spaceline-evil-normal                    ((t (:foreground ,hr-black     :background ,hr-blue))))
+   `(spaceline-evil-replace                   ((t (:foreground ,hr-white     :background ,hr-black-3))))
+   `(spaceline-evil-visual                    ((t (:foreground ,hr-black     :background ,hr-magenta))))
+   `(spaceline-flycheck-error                 ((t (:foreground ,hr-red))))
+   `(spaceline-flycheck-info                  ((t (:foreground ,hr-cyan))))
+   `(spaceline-flycheck-warning               ((t (:foreground ,hr-orange))))
+   `(spaceline-highlight-face                 ((t (:foreground ,hr-black     :background ,hr-orange))))
+   `(spaceline-modified                       ((t (                                                    :inherit spaceline-evil-normal))))
+   `(spaceline-python-venv                    ((t (:foreground ,hr-magenta))))
+   `(spaceline-read-only                      ((t (                                                    :inherit mode-line))))
+   `(spaceline-unmodified                     ((t (:foreground ,hr-black     :background ,hr-orange))))
 
 ;;;;; telephone-line
    `(telephone-line-accent-active             ((t (:foreground ,hr-fg        :background ,hr-black-5))))
