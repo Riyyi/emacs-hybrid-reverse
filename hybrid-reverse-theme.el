@@ -258,7 +258,7 @@
    `(message-separator                        ((t (                                                    :inherit font-lock-comment-face))))
 
 ;;;;; mode-line
-   `(header-line                              ((t (                          :background ,hr-magenta))))
+   `(header-line                              ((t (                          :background ,hr-black-3))))
    `(mode-line                                ((t (:foreground ,hr-fg        :background ,hr-black-3))))
    `(mode-line-buffer-id                      ((t (                                                    :weight bold))))
    `(mode-line-emphasis                       ((t (                                                    :weight bold))))
