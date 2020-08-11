@@ -39,6 +39,8 @@
 ;; - mu4e
 ;; - neotree
 ;; - php-mode
+;; - powerline
+;; - powerline-evil
 ;; - rainbow-delimiters
 ;; - selectrum
 ;; - spaceline
@@ -256,12 +258,12 @@
    `(message-separator                        ((t (                                                    :inherit font-lock-comment-face))))
 
 ;;;;; mode-line
-   `(header-line                              ((t (                          :background ,hr-black-3))))
+   `(header-line                              ((t (                          :background ,hr-magenta))))
    `(mode-line                                ((t (:foreground ,hr-fg        :background ,hr-black-3))))
-   `(mode-line-buffer-id                      ((t (:foreground ,hr-fg        :background ,hr-black-5))))
-   `(mode-line-emphasis                       ((t (:foreground ,hr-fg        :background ,hr-black-5))))
-   `(mode-line-inactive                       ((t (:foreground ,hr-black-8   :background ,hr-black-3))))
-   `(mode-line-highlight                      ((t (                                                    :inherit highlight))))
+   `(mode-line-buffer-id                      ((t (                                                    :weight bold))))
+   `(mode-line-emphasis                       ((t (                                                    :weight bold))))
+   `(mode-line-highlight                      ((t (:foreground ,hr-yellow))))
+   `(mode-line-inactive                       ((t (:foreground ,hr-black-8   :background ,hr-black-2))))
 
 ;;;;; org-mode
    `(org-agenda-structure                     ((t (:foreground ,hr-magenta))))
@@ -605,6 +607,25 @@
    `(php-doc-class-name                       ((t (:foreground ,hr-orange))))
    `(php-method-modifier                      ((t (:foreground ,hr-orange))))
    `(php-visibility-modifier                  ((t (:foreground ,hr-orange))))
+
+;;;;; powerline
+   `(mode-line-buffer-id-inactive             ((t (                                                    :inherit mode-line-buffer-id))))
+   `(powerline-active0                        ((t (                                                    :inherit mode-line-emphasis))))
+   `(powerline-active1                        ((t (                                                    :inherit mode-line))))
+   `(powerline-active2                        ((t (:foreground ,hr-fg                                  :inherit mode-line-inactive))))
+   `(powerline-inactive0                      ((t (                                                    :inherit mode-line-inactive))))
+   `(powerline-inactive1                      ((t (                                                    :inherit mode-line-inactive))))
+   `(powerline-inactive2                      ((t (:background ,hr-bg                                  :inherit mode-line-inactive))))
+
+;;;;; powerline-evil
+   `(powerline-evil-base-face                 ((t (                                                    :weight normal))))
+   `(powerline-evil-emacs-face                ((t (:foreground ,hr-black     :background ,hr-magenta   :inherit powerline-evil-base-face))))
+   `(powerline-evil-insert-face               ((t (:foreground ,hr-black     :background ,hr-green     :inherit powerline-evil-base-face))))
+   `(powerline-evil-motion-face               ((t (:foreground ,hr-black     :background ,hr-cyan      :inherit powerline-evil-base-face))))
+   `(powerline-evil-normal-face               ((t (:foreground ,hr-black     :background ,hr-blue      :inherit powerline-evil-base-face))))
+   `(powerline-evil-operator-face             ((t (:foreground ,hr-black     :background ,hr-orange    :inherit powerline-evil-base-face))))
+   `(powerline-evil-replace-face              ((t (:foreground ,hr-white     :background ,hr-black-3   :inherit powerline-evil-base-face))))
+   `(powerline-evil-visual-face               ((t (:foreground ,hr-black     :background ,hr-magenta   :inherit powerline-evil-base-face))))
 
 ;;;;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face          ((t (:foreground ,hr-fg))))
