@@ -46,6 +46,7 @@
 ;; - which-key
 ;;
 ;; Supported defaults:
+;; - custom (M-x customize)
 ;; - dired
 ;; - display-line-numbers-mode
 ;; - font-lock-mode
@@ -93,7 +94,7 @@
 	  (_hr-white+2    "#d0d0d0") ; grey82~
 	  (_hr-white+3    "#cccccc") ; grey80
 	  (hr-fg         "#c5c8c6") ; grey78~
-	  (_hr-white+4    "#bcbcbc") ; grey74~
+	  (hr-white+4    "#bcbcbc") ; grey74~
 	  (hr-white+5    "#9e9e9e") ; grey62
 	  (hr-white+6    "#707880") ; grey46~
 	  ;; ----------------------
@@ -153,9 +154,6 @@
 
 ;;;;; UI
    `(border                                   ((t (:foreground ,hr-white+5))))
-   `(custom-group-tag                         ((t (:foreground ,hr-blue))))
-   `(custom-state                             ((t (:foreground ,hr-green))))
-   `(custom-variable-tag                      ((t (:foreground ,hr-blue))))
    `(fringe                                   ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(highlight                                ((t (:foreground ,hr-yellow    :background ,hr-bg))))
    `(highlight-changes                        ((t (:foreground ,hr-red       :background ,hr-bg))))
@@ -166,9 +164,36 @@
    `(region                                   ((t (                          :background ,hr-black-6))))
    `(secondary-selection                      ((t (                          :background ,hr-black-3))))
    `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
+   `(widget-field                             ((t (:background ,hr-black-6))))
    `(window-divider                           ((t (:foreground ,hr-white+5))))
    `(window-divider-first-pixel               ((t (:foreground ,hr-black-6))))
    `(window-divider-last-pixel                ((t (:foreground ,hr-black-6))))
+
+;;;;; custom (M-x customize)
+   `(custom-button                            ((t (:foreground ,hr-bg        :background ,hr-white+4   :box (:line-width 2 :color nil :style released-button)))))
+   `(custom-button-mouse                      ((t (:background ,hr-white                               :inherit custom-button))))
+   `(custom-button-pressed                    ((t (:background ,hr-white+5                             :inherit custom-button :box (:style pressed-button)))))
+   `(custom-button-pressed-unraised           ((t (:foreground ,hr-magenta                             :inherit custom-button-unraised))))
+   `(custom-button-unraised                   ((t (                                                    :underline t))))
+   `(custom-changed                           ((t (:foreground ,hr-bg        :background ,hr-blue))))
+   `(custom-comment                           ((t (:background ,hr-black-6))))
+   `(custom-comment-tag                       ((t (:foreground ,hr-fg))))
+   `(custom-documentation                     ((t (:foreground ,hr-fg))))
+   `(custom-face-tag                          ((t (                                                    :inherit custom-variable-tag))))
+   `(custom-group-subtitle                    ((t (:foreground ,hr-orange                              :weight bold))))
+   `(custom-group-tag                         ((t (:foreground ,hr-orange                              :weight bold))))
+   `(custom-group-tag-1                       ((t (:foreground ,hr-magenta                             :inherit variable-pitch :weight bold :height 1.2))))
+   `(custom-invalid                           ((t (                                                    :inherit error))))
+   `(custom-link                              ((t (                                                    :inherit link :underline t))))
+   `(custom-modified                          ((t (:foreground ,hr-bg        :background ,hr-blue))))
+   `(custom-rogue                             ((t (:foreground ,hr-orange))))
+   `(custom-saved                             ((t (                                                    :underline t))))
+   `(custom-set                               ((t (:foreground ,hr-bg        :background ,hr-fg))))
+   `(custom-state                             ((t (:foreground ,hr-green))))
+   `(custom-themed                            ((t (:foreground ,hr-bg        :background ,hr-blue))))
+   `(custom-variable-button                   ((t (                                                    :weight bold :underline t))))
+   `(custom-variable-tag                      ((t (:foreground ,hr-blue))))
+   `(custom-visibility                        ((t (                                                    :inherit link :underline t :height 0.8))))
 
 ;;;;; dired
    `(dired-directory                          ((t (:foreground ,hr-magenta))))
@@ -291,8 +316,8 @@
    `(outline-8                                ((t (:foreground ,hr-yellow))))
 
 ;;;;; shell-script-mode
-   `(sh-heredoc                                ((t (:foreground nil                                     :inherit font-lock-string-face))))
-   `(sh-quoted-exec                            ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
+   `(sh-heredoc                               ((t (:foreground nil                                     :inherit font-lock-string-face))))
+   `(sh-quoted-exec                           ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
 
 ;;;;; show-paren-mode
    `(show-paren-match                         ((t (:foreground ,hr-cyan      :background ,hr-blue+1    :weight bold))))
