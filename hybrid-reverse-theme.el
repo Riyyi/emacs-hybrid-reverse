@@ -24,6 +24,7 @@
 ;; A port of the Vim theme Hybrid Reverse for Emacs 24.1+.
 ;;
 ;; Supported packages:
+;; - ace-window
 ;; - avy
 ;; - centaur-tabs
 ;; - column-enforce-mode
@@ -339,6 +340,13 @@
    `(whitespace-trailing                      ((t (:foreground ,hr-black-6   :background ,hr-orange))))
 
 ;;;; --- Third-party ---
+
+;;;;; ace-window
+   `(aw-background-face                       ((t (                          :background ,hr-black-2))))
+   `(aw-key-face                              ((t (:foreground ,hr-blue))))
+   `(aw-leading-char-face                     ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(aw-minibuffer-leading-char-face          ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(aw-mode-line-face                        ((t (                                                    :inherit mode-line))))
 
 ;;;;; avy
    `(avy-background-face                      ((t (:foreground ,hr-bg        :background ,hr-yellow    :weight bold))))
