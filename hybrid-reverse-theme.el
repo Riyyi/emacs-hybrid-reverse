@@ -157,6 +157,7 @@
 
 ;;;;; UI
    `(border                                   ((t (:foreground ,hr-white+5))))
+   `(fill-column-indicator                    ((t (:foreground ,hr-white+6))))
    `(fringe                                   ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(highlight                                ((t (:foreground ,hr-yellow    :background ,hr-bg))))
    `(highlight-changes                        ((t (:foreground ,hr-red       :background ,hr-bg))))
@@ -166,6 +167,7 @@
    `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(region                                   ((t (                          :background ,hr-black-6))))
    `(secondary-selection                      ((t (                          :background ,hr-black-3))))
+   `(tab-line                                 ((t (                          :background ,hr-black-3))))
    `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
    `(widget-field                             ((t (:background ,hr-black-6))))
    `(window-divider                           ((t (:foreground ,hr-white+5))))
