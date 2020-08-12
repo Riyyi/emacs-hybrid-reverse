@@ -157,7 +157,7 @@
 
 ;;;;; UI
    `(border                                   ((t (:foreground ,hr-white+5))))
-   `(fill-column-indicator                    ((t (:foreground ,hr-white+6))))
+   `(fill-column-indicator                    ((t (:foreground ,hr-black-3))))
    `(fringe                                   ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(highlight                                ((t (:foreground ,hr-yellow    :background ,hr-bg))))
    `(highlight-changes                        ((t (:foreground ,hr-red       :background ,hr-bg))))
