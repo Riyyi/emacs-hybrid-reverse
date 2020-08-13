@@ -29,6 +29,7 @@
 ;; - centaur-tabs
 ;; - column-enforce-mode
 ;; - company-mode
+;; - dashboard
 ;; - deft
 ;; - doom-modeline
 ;; - elfeed
@@ -388,6 +389,13 @@
    `(company-tooltip-common-selection         ((t (:foreground ,hr-bg        :background ,hr-yellow))))
    `(company-tooltip-mouse                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
    `(company-tooltip-selection                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+
+;;;;; dashboard
+   `(dashboard-banner-logo-title              ((t (:foreground ,hr-fg))))
+   `(dashboard-footer                         ((t (:foreground ,hr-white+6))))
+   `(dashboard-heading                        ((t (:foreground ,hr-blue))))
+   `(dashboard-navigator                      ((t (:foreground ,hr-blue))))
+   `(dashboard-text-banner                    ((t (:foreground ,hr-blue))))
 
 ;;;;; deft
    `(deft-filter-string-error-face            ((t (:inherit error))))
