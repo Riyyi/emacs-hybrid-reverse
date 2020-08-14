@@ -355,9 +355,9 @@
    `(show-paren-mismatch                      ((t (:foreground ,hr-white+1   :background ,hr-red       :weight bold))))
 
 ;;;;; tab-bar-mode
-   `(tab-bar                                  ((t (:foreground ,hr-black-3   :background ,hr-black-3))))
+   `(tab-bar                                  ((t (                          :background ,hr-black-3))))
    `(tab-bar-tab                              ((t (:foreground ,hr-white     :background ,hr-black-6))))
-   `(tab-bar-tab-inactive                     ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(tab-bar-tab-inactive                     ((t (                                                    :inherit tab-bar))))
 
 ;;;;; tab-line-mode
    `(tab-line                                 ((t (                          :background ,hr-black-3))))
