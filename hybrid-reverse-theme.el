@@ -66,6 +66,8 @@
 ;; - outline-mode
 ;; - shell-script-mode
 ;; - show-paren-mode
+;; - tab-bar-mode
+;; - tab-line-mode
 ;; - whitespace-mode
 
 ;;; References:
@@ -171,7 +173,6 @@
    `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(region                                   ((t (                          :background ,hr-black-6))))
    `(secondary-selection                      ((t (                          :background ,hr-black-3))))
-   `(tab-line                                 ((t (                          :background ,hr-black-3))))
    `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
    `(widget-field                             ((t (:background ,hr-black-6))))
    `(window-divider                           ((t (:foreground ,hr-white+5))))
@@ -352,6 +353,19 @@
    `(show-paren-match                         ((t (:foreground ,hr-cyan      :background ,hr-blue+1    :weight bold))))
    `(show-paren-match-expression              ((t (                                                    :inherit show-paren-match))))
    `(show-paren-mismatch                      ((t (:foreground ,hr-white+1   :background ,hr-red       :weight bold))))
+
+;;;;; tab-bar-mode
+   `(tab-bar                                  ((t (:foreground ,hr-black-3   :background ,hr-black-3))))
+   `(tab-bar-tab                              ((t (:foreground ,hr-white     :background ,hr-black-6))))
+   `(tab-bar-tab-inactive                     ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+
+;;;;; tab-line-mode
+   `(tab-line                                 ((t (                          :background ,hr-black-3))))
+   `(tab-line-close-highlight                 ((t (:foreground ,hr-orange                              :weight bold :underline t))))
+   `(tab-line-highlight                       ((t (:foreground ,hr-white     :background ,hr-black-6))))
+   `(tab-line-tab                             ((t (                          :background ,hr-black-3))))
+   `(tab-line-tab-current                     ((t (:foreground ,hr-white     :background ,hr-black-6))))
+   `(tab-line-tab-inactive                    ((t (                                                    :inherit tab-line-tab))))
 
 ;;;;; whitespace-mode
    `(trailing-whitespace                      ((t (:foreground ,hr-black-6   :background ,hr-orange))))
