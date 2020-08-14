@@ -252,7 +252,7 @@
 
 ;;;;; man
    `(Man-overstrike                           ((t (:foreground ,hr-blue                                :weight bold))))
-   `(Man-reverse                              ((t (:foreground ,hr-bg        :background ,hr-fg))))
+   `(Man-reverse                              ((t (:foreground ,hr-bg        :background ,hr-fg        :weight bold))))
    `(Man-underline                            ((t (:foreground ,hr-magenta                             :underline t))))
 
 ;;; message-mode
