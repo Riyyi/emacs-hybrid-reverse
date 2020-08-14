@@ -58,6 +58,7 @@
 ;; - ido-mode
 ;; - isearch
 ;; - linum-mode
+;; - man
 ;; - message-mode
 ;; - mode-line
 ;; - org-mode*
@@ -248,6 +249,11 @@
 ;;;;; display-line-numbers-mode (Emacs >=26.1)
    `(line-number                              ((t (:foreground ,hr-white+5   :background ,hr-black-2))))
    `(line-number-current-line                 ((t (:foreground ,hr-yellow    :background ,hr-black-2   :weight bold))))
+
+;;;;; man
+   `(Man-overstrike                           ((t (:foreground ,hr-blue                                :weight bold))))
+   `(Man-reverse                              ((t (:foreground ,hr-bg        :background ,hr-fg))))
+   `(Man-underline                            ((t (:foreground ,hr-magenta                             :underline t))))
 
 ;;; message-mode
    `(message-cited-text                       ((t (:foreground ,hr-white+5))))
