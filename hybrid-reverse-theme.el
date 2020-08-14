@@ -56,6 +56,7 @@
 ;; - display-line-numbers-mode
 ;; - font-lock-mode
 ;; - ido-mode
+;; - info
 ;; - isearch
 ;; - linum-mode
 ;; - man
@@ -236,6 +237,21 @@
    `(ido-indicator                            ((t (:foreground ,hr-red))))
    `(ido-only-match                           ((t (:foreground ,hr-green))))
    `(ido-subdir                               ((t (:foreground ,hr-magenta))))
+
+;;;;; info
+   ;; `(Info-quoted                              ((t (                                                    :inherit fixed-pitch-serif))))
+   `(info-header-node                         ((t (                                                    :inherit info-node))))
+   `(info-header-xref                         ((t (:foreground ,hr-blue :weight bold))))
+   `(info-index-match                         ((t (                                                    :inherit match))))
+   `(info-menu-header                         ((t (                                                    :inherit variable-pitch :weight bold :height 1.1))))
+   `(info-menu-star                           ((t (:foreground ,hr-fg))))
+   `(info-node                                ((t (                                                    :weight bold :slant italic))))
+   `(info-title-1                             ((t (                                                    :inherit info-title-2 :height 1.2))))
+   `(info-title-2                             ((t (                                                    :inherit info-title-3 :height 1.2))))
+   `(info-title-3                             ((t (                                                    :inherit info-title-4 :height 1.2))))
+   `(info-title-4                             ((t (:foreground ,hr-orange                              :inherit variable-pitch :weight bold))))
+   `(info-xref                                ((t (                                                    :inherit link))))
+   `(info-xref-visited                        ((t (                                                    :inherit (link-visited info-xref)))))
 
 ;;;;; search
    `(isearch                                  ((t (:foreground ,hr-bg        :background ,hr-yellow))))
