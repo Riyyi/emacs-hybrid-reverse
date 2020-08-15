@@ -49,6 +49,7 @@
 ;; - spaceline
 ;; - telephone-line
 ;; - transient
+;; - treemacs
 ;; - which-key
 ;;
 ;; Supported defaults:
@@ -168,7 +169,7 @@
    `(fringe                                   ((t (:foreground ,hr-fg        :background ,hr-bg))))
    `(highlight                                ((t (:foreground ,hr-yellow    :background ,hr-bg))))
    `(highlight-changes                        ((t (:foreground ,hr-red       :background ,hr-bg))))
-   `(hl-line                                  ((t (                          :background ,hr-black-3))))
+   `(hl-line                                  ((t (                          :background ,hr-black-3   :extend t))))
    `(link                                     ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(link-visited                             ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
@@ -654,7 +655,7 @@
 ;;;;; neotree
    `(neo-banner-face                          ((t (:foreground ,hr-orange                              :weight bold))))
    `(neo-button-face                          ((t (                                                    :underline t))))
-   `(neo-dir-link-face                        ((t (:foreground ,hr-blue))))
+   `(neo-dir-link-face                        ((t (:foreground ,hr-magenta))))
    `(neo-expand-btn-face                      ((t (:foreground ,hr-black-7))))
    `(neo-file-link-face                       ((t (:foreground ,hr-fg))))
    `(neo-header-face                          ((t (:foreground ,hr-fg        :background ,hr-black-3))))
@@ -662,7 +663,7 @@
    `(neo-vc-added-face                        ((t (:foreground ,hr-green))))
    `(neo-vc-conflict-face                     ((t (:foreground ,hr-red))))
    `(neo-vc-default-face                      ((t (:foreground ,hr-fg))))
-   `(neo-vc-edited-face                       ((t (:foreground ,hr-magenta))))
+   `(neo-vc-edited-face                       ((t (:foreground ,hr-blue))))
    `(neo-vc-ignored-face                      ((t (:foreground ,hr-white+6))))
    `(neo-vc-missing-face                      ((t (:foreground ,hr-red))))
    `(neo-vc-needs-merge-face                  ((t (:foreground ,hr-red))))
@@ -793,6 +794,31 @@
    `(transient-unreachable                    ((t (:foreground ,hr-fg))))
    `(transient-unreachable-key                ((t (:foreground ,hr-fg))))
    `(transient-value                          ((t (:foreground ,hr-magenta))))
+
+;;;;; treemacs
+   `(treemacs-directory-collapsed-face        ((t (:foreground ,hr-magenta))))
+   `(treemacs-directory-face                  ((t (:foreground ,hr-magenta))))
+   `(treemacs-file-face                       ((t (:foreground ,hr-fg))))
+   `(treemacs-fringe-indicator-face           ((t (:foreground ,hr-fg))))
+   `(treemacs-git-added-face                  ((t (:foreground ,hr-green))))
+   `(treemacs-git-conflict-face               ((t (:foreground ,hr-red))))
+   `(treemacs-git-ignored-face                ((t (:foreground ,hr-white+6))))
+   `(treemacs-git-modified-face               ((t (:foreground ,hr-blue))))
+   `(treemacs-git-renamed-face                ((t (:foreground ,hr-cyan))))
+   `(treemacs-git-unmodified-face             ((t (:foreground ,hr-fg))))
+   `(treemacs-git-untracked-face              ((t (:foreground ,hr-white+5))))
+   `(treemacs-header-button-face              ((t (:foreground ,hr-blue                                :underline t))))
+   `(treemacs-help-column-face                ((t (:foreground ,hr-yellow))))
+   `(treemacs-help-title-face                 ((t (:foreground ,hr-blue))))
+   `(treemacs-on-failure-pulse-face           ((t (:foreground ,hr-bg        :background ,hr-red))))
+   `(treemacs-on-success-pulse-face           ((t (:foreground ,hr-bg        :background ,hr-green))))
+   `(treemacs-root-face                       ((t (:foreground ,hr-orange))))
+   `(treemacs-root-remote-disconnected-face   ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(treemacs-root-remote-face                ((t (:foreground ,hr-yellow))))
+   `(treemacs-root-remote-unreadable-face     ((t (                                                    :inherit treemacs-root-remote-face :strike-through t))))
+   `(treemacs-root-unreadable-face            ((t (                                                    :inherit treemacs-root-face :strike-through t))))
+   `(treemacs-tags-face                       ((t (:foreground ,hr-blue))))
+   `(treemacs-term-node-face                  ((t (:foreground ,hr-green))))
 
 ;;;;; which-key
    `(which-key-command-description-face       ((t (:foreground ,hr-blue))))
