@@ -40,6 +40,7 @@
 ;; - magit
 ;; - mu4e
 ;; - neotree
+;; - org-roam
 ;; - php-mode
 ;; - powerline
 ;; - powerline-evil
@@ -667,6 +668,12 @@
    `(neo-vc-needs-merge-face                  ((t (:foreground ,hr-red))))
    `(neo-vc-unlocked-changes-face             ((t (:foreground ,hr-orange                              :slant italic))))
    `(neo-vc-user-face                         ((t (:foreground ,hr-red                                 :slant italic))))
+
+;;;;; org-roam
+   `(org-roam-link                            ((t (                                                    :inherit org-link))))
+   `(org-roam-link-current                    ((t (                                                    :inherit org-link))))
+   `(org-roam-link-invalid                    ((t (:foreground ,hr-red                                 :inherit org-link))))
+   `(org-roam-link-shielded                   ((t (:foreground ,hr-orange                              :inherit org-link))))
 
 ;;;;; php-mode
    `(php-$this                                ((t (:foreground ,hr-red))))
