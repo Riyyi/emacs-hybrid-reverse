@@ -47,6 +47,7 @@
 ;; - rainbow-delimiters
 ;; - selectrum
 ;; - spaceline
+;; - switch-window
 ;; - telephone-line
 ;; - transient
 ;; - treemacs
@@ -388,7 +389,7 @@
 ;;;;; ace-window
    `(aw-background-face                       ((t (                          :background ,hr-black-2))))
    `(aw-key-face                              ((t (:foreground ,hr-blue))))
-   `(aw-leading-char-face                     ((t (:foreground ,hr-yellow                              :weight bold))))
+   `(aw-leading-char-face                     ((t (:foreground ,hr-yellow                              :weight bold :height 3.0))))
    `(aw-minibuffer-leading-char-face          ((t (:foreground ,hr-yellow                              :weight bold))))
    `(aw-mode-line-face                        ((t (                                                    :inherit mode-line))))
 
@@ -761,6 +762,10 @@
    `(spaceline-python-venv                    ((t (:foreground ,hr-magenta))))
    `(spaceline-read-only                      ((t (                                                    :inherit mode-line))))
    `(spaceline-unmodified                     ((t (:foreground ,hr-black     :background ,hr-orange))))
+
+;;;;; switch-window
+   `(switch-window-background                 ((t (:foreground ,hr-black-2))))
+   `(switch-window-label                      ((t (:foreground ,hr-yellow                              :weight bold :height 3.0))))
 
 ;;;;; telephone-line
    `(telephone-line-accent-active             ((t (:foreground ,hr-fg        :background ,hr-black-5))))
