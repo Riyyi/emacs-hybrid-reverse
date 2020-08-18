@@ -43,6 +43,7 @@
 ;; - org-roam
 ;; - paradox
 ;; - php-mode
+;; - popup
 ;; - powerline
 ;; - powerline-evil
 ;; - rainbow-delimiters
@@ -724,6 +725,18 @@
    `(php-doc-class-name                       ((t (:foreground ,hr-orange))))
    `(php-method-modifier                      ((t (:foreground ,hr-orange))))
    `(php-visibility-modifier                  ((t (:foreground ,hr-orange))))
+
+;;;;; popup
+   `(popup-face                               ((t (                          :background ,hr-black-3))))
+   `(popup-summary-face                       ((t (:foreground ,hr-white+6                             :inherit popup-face))))
+   `(popup-scroll-bar-foreground-face         ((t (                          :background ,hr-black-6))))
+   `(popup-scroll-bar-background-face         ((t (                          :background ,hr-black-3))))
+   `(popup-isearch-match                      ((t (:foreground ,hr-bg        :background ,hr-yellow))))
+   `(popup-tip-face                           ((t (:background ,hr-black-3))))
+   `(popup-menu-face                          ((t (                          :background ,hr-black-3))))
+   `(popup-menu-mouse-face                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(popup-menu-selection-face                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(popup-menu-summary-face                  ((t (                                                    :inherit popup-summary-face))))
 
 ;;;;; powerline
    `(mode-line-buffer-id-inactive             ((t (                                                    :inherit mode-line-buffer-id))))
