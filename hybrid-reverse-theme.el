@@ -25,6 +25,7 @@
 ;;
 ;; Supported packages:
 ;; - ace-window
+;; - auto-complete
 ;; - avy
 ;; - centaur-tabs
 ;; - column-enforce-mode
@@ -394,6 +395,16 @@
    `(aw-leading-char-face                     ((t (:foreground ,hr-yellow                              :weight bold :height 3.0))))
    `(aw-minibuffer-leading-char-face          ((t (:foreground ,hr-yellow                              :weight bold))))
    `(aw-mode-line-face                        ((t (                                                    :inherit mode-line))))
+
+;;;;; auto-complete
+   `(ac-candidate-face                        ((t (                          :background ,hr-black-3))))
+   `(ac-candidate-mouse-face                  ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(ac-completion-face                       ((t (:foreground ,hr-yellow    :background ,hr-black-3))))
+   `(ac-gtags-candidate-face                  ((t (                          :background ,hr-black-3))))
+   `(ac-gtags-selection-face                  ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(ac-selection-face                        ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
+   `(ac-yasnippet-candidate-face              ((t (                          :background ,hr-black-3))))
+   `(ac-yasnippet-selection-face              ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
 
 ;;;;; avy
    `(avy-background-face                      ((t (:foreground ,hr-bg        :background ,hr-yellow    :weight bold))))
