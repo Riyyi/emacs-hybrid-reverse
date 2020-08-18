@@ -41,6 +41,7 @@
 ;; - mu4e
 ;; - neotree
 ;; - org-roam
+;; - paradox
 ;; - php-mode
 ;; - powerline
 ;; - powerline-evil
@@ -676,6 +677,20 @@
    `(org-roam-link-current                    ((t (                                                    :inherit org-link))))
    `(org-roam-link-invalid                    ((t (:foreground ,hr-red                                 :inherit org-link))))
    `(org-roam-link-shielded                   ((t (:foreground ,hr-orange                              :inherit org-link))))
+
+;;;;; paradox
+   `(paradox-archive-face                     ((t (                                                    :inherit paradox-comment-face))))
+   `(paradox-comment-face                     ((t (:foreground ,hr-white+6))))
+   `(paradox-commit-tag-face                  ((t (:foreground ,hr-green))))
+   `(paradox-description-face                 ((t (:foreground ,hr-fg))))
+   `(paradox-description-face-multiline       ((t (:foreground ,hr-white+6))))
+   `(paradox-download-face                    ((t (:foreground ,hr-blue))))
+   `(paradox-highlight-face                   ((t (:foreground ,hr-orange                              :weight bold))))
+   `(paradox-homepage-button-face             ((t (:foreground ,hr-white+6                             :underline t))))
+   `(paradox-mode-line-face                   ((t (:foreground ,hr-blue                                :weight bold))))
+   `(paradox-name-face                        ((t (:foreground ,hr-blue                                :underline t))))
+   `(paradox-star-face                        ((t (:foreground ,hr-yellow))))
+   `(paradox-starred-face                     ((t (:foreground ,hr-orange))))
 
 ;;;;; php-mode
    `(php-$this                                ((t (:foreground ,hr-red))))
