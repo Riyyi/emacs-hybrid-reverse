@@ -681,7 +681,7 @@
 ;;;;; paradox
    `(paradox-archive-face                     ((t (                                                    :inherit paradox-comment-face))))
    `(paradox-comment-face                     ((t (:foreground ,hr-white+6))))
-   `(paradox-commit-tag-face                  ((t (:foreground ,hr-green))))
+   `(paradox-commit-tag-face                  ((t (:foreground ,hr-orange))))
    `(paradox-description-face                 ((t (:foreground ,hr-fg))))
    `(paradox-description-face-multiline       ((t (:foreground ,hr-white+6))))
    `(paradox-download-face                    ((t (:foreground ,hr-blue))))
