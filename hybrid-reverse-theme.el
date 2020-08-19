@@ -877,7 +877,7 @@
    `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))
 
 ;;;;; winum
-   `(winum-face                               ((t (:foreground ,hr-cyan :weight bold))))))
+   `(winum-face                               ((t (:foreground ,hr-cyan                                :weight bold))))))
 
 ;;;###autoload
 (when load-file-name
