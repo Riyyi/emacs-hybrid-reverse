@@ -55,6 +55,7 @@
 ;; - transient
 ;; - treemacs
 ;; - which-key
+;; - winum
 ;;
 ;; Supported defaults:
 ;; - custom (M-x customize)
@@ -74,8 +75,8 @@
 ;; - show-paren-mode
 ;; - tab-bar-mode
 ;; - tab-line-mode
+;; - tty-menu
 ;; - whitespace-mode
-;; - winum
 
 ;;; References:
 
@@ -161,10 +162,12 @@
 
 ;;;;; Basic coloring
    `(cursor                                   ((t (                          :background ,hr-white+1))))
-   ;; Basic default face
    `(default                                  ((t (:foreground ,hr-fg        :background ,hr-bg))))
-   `(escape-glyph                             ((t (:foreground ,hr-cyan))))
    `(error                                    ((t (:foreground ,hr-red       :background ,hr-bg        :weight bold))))
+   `(escape-glyph                             ((t (:foreground ,hr-cyan))))
+   `(homoglyph                                ((t (:foreground ,hr-cyan))))
+   `(nobreak-hyphen                           ((t (:foreground ,hr-cyan))))
+   `(nobreak-space                            ((t (:foreground ,hr-cyan                                :underline t))))
    `(success                                  ((t (:foreground ,hr-green                               :weight bold))))
    `(warning                                  ((t (:foreground ,hr-orange                              :weight bold))))
 
@@ -180,6 +183,9 @@
    `(minibuffer-prompt                        ((t (:foreground ,hr-blue      :background ,hr-bg))))
    `(region                                   ((t (                          :background ,hr-black-6))))
    `(secondary-selection                      ((t (                          :background ,hr-black-3))))
+   `(tooltip                                  ((t (                          :background ,hr-black-3))))
+   `(tool-bar                                 ((t (                          :background ,hr-black-3))))
+   `(vertical-border                          ((t (:foreground ,hr-white+5))))
    `(widget-button-pressed                    ((t (:foreground ,hr-orange))))
    `(widget-field                             ((t (:background ,hr-black-6))))
    `(window-divider                           ((t (:foreground ,hr-white+5))))
@@ -373,6 +379,11 @@
    `(tab-line-tab                             ((t (                          :background ,hr-black-3))))
    `(tab-line-tab-current                     ((t (:foreground ,hr-white     :background ,hr-black-6))))
    `(tab-line-tab-inactive                    ((t (                                                    :inherit tab-line-tab))))
+
+;;;;; tty-menu
+   `(tty-menu-disabled-face                   ((t (                          :background ,hr-black-3))))
+   `(tty-menu-enabled-face                    ((t (:foreground ,hr-white     :background ,hr-black-6   :weight bold))))
+   `(tty-menu-selected-face                   ((t (                          :background ,hr-orange))))
 
 ;;;;; whitespace-mode
    `(trailing-whitespace                      ((t (:foreground ,hr-black-6   :background ,hr-orange))))
@@ -744,7 +755,7 @@
    `(popup-scroll-bar-foreground-face         ((t (                          :background ,hr-black-6))))
    `(popup-scroll-bar-background-face         ((t (                          :background ,hr-black-3))))
    `(popup-isearch-match                      ((t (:foreground ,hr-bg        :background ,hr-yellow))))
-   `(popup-tip-face                           ((t (:background ,hr-black-3))))
+   `(popup-tip-face                           ((t (                          :background ,hr-black-3))))
    `(popup-menu-face                          ((t (                          :background ,hr-black-3))))
    `(popup-menu-mouse-face                    ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
    `(popup-menu-selection-face                ((t (:foreground ,hr-yellow    :background ,hr-black-6))))
