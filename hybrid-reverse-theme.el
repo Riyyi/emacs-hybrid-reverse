@@ -75,6 +75,7 @@
 ;; - tab-bar-mode
 ;; - tab-line-mode
 ;; - whitespace-mode
+;; - winum
 
 ;;; References:
 
@@ -873,7 +874,10 @@
    `(which-key-local-map-description-face     ((t (:foreground ,hr-blue))))
    `(which-key-note-face                      ((t (:foreground ,hr-white+6))))
    `(which-key-separator-face                 ((t (:foreground ,hr-white+6))))
-   `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))))
+   `(which-key-special-key-face               ((t (:foreground ,hr-yellow))))
+
+;;;;; winum
+   `(winum-face                               ((t (:foreground ,hr-cyan :weight bold))))))
 
 ;;;###autoload
 (when load-file-name
