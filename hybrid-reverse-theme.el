@@ -37,6 +37,7 @@
 ;; - evil
 ;; - flycheck
 ;; - ido-vertical-mode
+;; - linum-relative
 ;; - lsp-ui
 ;; - magit
 ;; - mu4e
@@ -541,6 +542,9 @@
 
 ;;;;; ido-vertical-mode
    `(ido-vertical-match-face                  ((t (:foreground ,hr-yellow                              :weight bold :underline t))))
+
+;;;;; linum-relative
+   `(linum-relative-current-face              ((t (:foreground ,hr-yellow    :background ,hr-black-2   :weight bold))))
 
 ;;;;; lsp-ui
    `(lsp-ui-doc-background                    ((t (                          :background ,hr-black-3))))
