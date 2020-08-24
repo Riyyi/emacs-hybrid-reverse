@@ -50,6 +50,7 @@
 ;; - powerline-evil
 ;; - rainbow-delimiters
 ;; - selectrum
+;; - smart-mode-line
 ;; - spaceline
 ;; - switch-window
 ;; - telephone-line
@@ -472,17 +473,17 @@
    `(deft-title-face                          ((t (:foreground ,hr-blue                                :weight bold))))
 
 ;;;;; doom-modeline
-   `(doom-modeline-bar                        ((t (:background ,hr-blue))))
+   `(doom-modeline-bar                        ((t (                          :background ,hr-blue))))
    `(doom-modeline-bar-inactive               ((t (                                                    :inherit mode-line-inactive))))
    `(doom-modeline-battery-charging           ((t (:foreground ,hr-fg))))
-   `(doom-modeline-battery-critical           ((t (:inherit warning))))
-   `(doom-modeline-battery-error              ((t (:inherit error))))
+   `(doom-modeline-battery-critical           ((t (                                                    :inherit warning))))
+   `(doom-modeline-battery-error              ((t (                                                    :inherit error))))
    `(doom-modeline-battery-full               ((t (:foreground ,hr-green))))
    `(doom-modeline-battery-normal             ((t (:foreground ,hr-fg))))
    `(doom-modeline-battery-warning            ((t (:foreground ,hr-orange))))
-   `(doom-modeline-buffer-file                ((t (:inherit mode-line-emphasis))))
+   `(doom-modeline-buffer-file                ((t (                                                    :inherit mode-line-emphasis))))
    `(doom-modeline-buffer-major-mode          ((t (:foreground ,hr-blue                                :inherit mode-line-emphasis))))
-   `(doom-modeline-buffer-minor-mode          ((t (:background ,hr-cyan))))
+   `(doom-modeline-buffer-minor-mode          ((t (                          :background ,hr-cyan))))
    `(doom-modeline-buffer-modified            ((t (:foreground ,hr-orange                              :weight bold))))
    `(doom-modeline-buffer-path                ((t (                                                    :weight bold))))
    `(doom-modeline-buffer-timemachine         ((t (                                                    :inherit doom-modeline-buffer-file :underline t :slant italic))))
@@ -496,7 +497,7 @@
    `(doom-modeline-evil-visual-state          ((t (:foreground ,hr-magenta))))
    `(doom-modeline-highlight                  ((t (:foreground ,hr-blue))))
    `(doom-modeline-host                       ((t (                                                    :slant italic))))
-   `(doom-modeline-info                       ((t (:foreground ,hr-cyan :weight bold))))
+   `(doom-modeline-info                       ((t (:foreground ,hr-cyan                                :weight bold))))
    `(doom-modeline-input-method               ((t (                                                    :inherit mode-line-emphasis))))
    `(doom-modeline-input-method-alt           ((t (                                                    :inherit font-lock-doc-face :weight bold))))
    `(doom-modeline-lsp-error                  ((t (                                                    :inherit error :weight normal))))
@@ -506,7 +507,7 @@
    `(doom-modeline-panel                      ((t (                                                    :inherit mode-line-highlight))))
    `(doom-modeline-persp-buffer-not-in-persp  ((t (                                                    :inherit font-lock-doc-face :weight bold :slant italic))))
    `(doom-modeline-persp-name                 ((t (                                                    :inherit font-lock-comment-face))))
-   `(doom-modeline-project-dir                ((t (:foreground ,hr-magenta :weight bold))))
+   `(doom-modeline-project-dir                ((t (:foreground ,hr-magenta                             :weight bold))))
    `(doom-modeline-project-parent-dir         ((t (                                                    :inherit font-lock-comment-face :weight bold))))
    `(doom-modeline-project-root-dir           ((t (                                                    :inherit mode-line-emphasis))))
    `(doom-modeline-repl-success               ((t (:foreground ,hr-green))))
@@ -801,6 +802,35 @@
    `(selectrum-current-candidate              ((t (:foreground ,hr-orange                              :weight bold))))
    `(selectrum-primary-highlight              ((t (:foreground ,hr-blue))))
    `(selectrum-secondary-highlight            ((t (:foreground ,hr-red))))
+
+;;;;; smart-mode-line
+   `(sml/charging                             ((t (:foreground ,hr-fg))))
+   `(sml/client                               ((t (                                                    :inherit sml/prefix))))
+   `(sml/col-number                           ((t (                                                    :inherit sml/global))))
+   `(sml/discharging                          ((t (:foreground ,hr-fg))))
+   `(sml/filename                             ((t (                                                    :inherit mode-line-emphasis))))
+   `(sml/folder                               ((t (:foreground ,hr-magenta                             :inherit mode-line-emphasis))))
+   `(sml/git                                  ((t (                                                    :inherit sml/vc))))
+   `(sml/global                               ((t (:foreground ,hr-fg))))
+   `(sml/line-number                          ((t (                                                    :inherit sml/global))))
+   `(sml/minor-modes                          ((t (:foreground ,hr-cyan))))
+   `(sml/modes                                ((t (:foreground ,hr-blue                                :inherit mode-line-emphasis))))
+   `(sml/modified                             ((t (:foreground ,hr-orange))))
+   `(sml/mule-info                            ((t (                                                    :inherit sml/global))))
+   `(sml/name-filling                         ((t (                                                    :inherit sml/position-percentage))))
+   `(sml/not-modified                         ((t (                                                    :inherit sml/global))))
+   `(sml/numbers-separator                    ((t (                                                    :inherit sml/global))))
+   `(sml/outside-modified                     ((t (:foreground ,hr-red                                 :weight bold))))
+   `(sml/position-percentage                  ((t (                                                    :inherit sml/global))))
+   `(sml/prefix                               ((t (                                                    :inherit sml/global))))
+   `(sml/process                              ((t (                                                    :inherit sml/prefix))))
+   `(sml/projectile                           ((t (:foreground ,hr-magenta                             :weight bold))))
+   `(sml/read-only                            ((t (:foreground ,hr-orange                              :weight bold))))
+   `(sml/remote                               ((t (                                                    :inherit sml/global))))
+   `(sml/sudo                                 ((t (:foreground ,hr-red                                 :weight bold))))
+   `(sml/time                                 ((t (                                                    :inherit sml/global))))
+   `(sml/vc                                   ((t (:foreground ,hr-cyan                                :weight bold))))
+   `(sml/vc-edited                            ((t (:foreground ,hr-orange                              :weight bold))))
 
 ;;;;; spaceline
    `(spaceline-evil-emacs                     ((t (:foreground ,hr-black     :background ,hr-magenta))))
