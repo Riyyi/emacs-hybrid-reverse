@@ -56,6 +56,7 @@
 ;; - telephone-line
 ;; - transient
 ;; - treemacs
+;; - vterm
 ;; - which-key
 ;; - winum
 ;;
