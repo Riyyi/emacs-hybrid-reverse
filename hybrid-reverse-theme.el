@@ -21,7 +21,7 @@
 
 ;;; Commentary:
 
-;; A port of the Vim theme Hybrid Reverse for Emacs 24.1+.
+;; Material color scheme based on Hybrid Reverse for Vim.
 ;;
 ;; Supported packages:
 ;; - ace-window
@@ -398,7 +398,7 @@
    `(term-color-red                           ((t (:foreground ,hr-red+1     :background ,hr-red))))
    `(term-color-white                         ((t (:foreground ,hr-white+6   :background ,hr-fg))))
    `(term-color-yellow                        ((t (:foreground ,hr-orange    :background ,hr-yellow))))
-   `(term-underline                           ((t (:underline t))))
+   `(term-underline                           ((t (                                                    :underline t))))
 
 ;;;;; tty-menu
    `(tty-menu-disabled-face                   ((t (                          :background ,hr-black-3))))
@@ -927,6 +927,19 @@
    `(treemacs-root-unreadable-face            ((t (                                                    :inherit treemacs-root-face :strike-through t))))
    `(treemacs-tags-face                       ((t (:foreground ,hr-blue))))
    `(treemacs-term-node-face                  ((t (:foreground ,hr-green))))
+
+;;;;; vterm
+   `(vterm-color-black                        ((t (:foreground ,hr-black-3   :background ,hr-black-6))))
+   `(vterm-color-blue                         ((t (:foreground ,hr-blue+1    :background ,hr-blue))))
+   `(vterm-color-cyan                         ((t (:foreground ,hr-cyan+1    :background ,hr-cyan))))
+   `(vterm-color-default                      ((t (:foreground ,hr-fg        :background ,hr-bg))))
+   `(vterm-color-green                        ((t (:foreground ,hr-green+1   :background ,hr-green))))
+   `(vterm-color-inverse-video                ((t (                          :background ,hr-bg        :inverse-video t))))
+   `(vterm-color-magenta                      ((t (:foreground ,hr-magenta+1 :background ,hr-magenta))))
+   `(vterm-color-red                          ((t (:foreground ,hr-red+1     :background ,hr-red))))
+   `(vterm-color-underline                    ((t (                                                    :underline t))))
+   `(vterm-color-white                        ((t (:foreground ,hr-white+6   :background ,hr-fg))))
+   `(vterm-color-yellow                       ((t (:foreground ,hr-orange    :background ,hr-yellow))))
 
 ;;;;; which-key
    `(which-key-command-description-face       ((t (:foreground ,hr-blue))))

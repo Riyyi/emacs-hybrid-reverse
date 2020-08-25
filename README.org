@@ -3,7 +3,7 @@
 
 * Hybrid Reverse theme for Emacs
 
-Material color scheme for Emacs based on [[https://github.com/kristijanhusak/vim-hybrid-material#hybrid-reverse][kristijanhusak/vim-hybrid-material]] color scheme.
+Material color scheme based on [[https://github.com/kristijanhusak/vim-hybrid-material#hybrid-reverse][kristijanhusak/vim-hybrid-material]] for Vim.
 
 ** Installation
 
