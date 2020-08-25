@@ -77,6 +77,7 @@
 ;; - show-paren-mode
 ;; - tab-bar-mode
 ;; - tab-line-mode
+;; - term
 ;; - tty-menu
 ;; - whitespace-mode
 
@@ -137,23 +138,27 @@
 	  (_hr-orange+1   "#875f00")
 	  ;; ----------------------
 	  (hr-yellow     "#f0c674")
-	  (_hr-yellow+1   "#5f5f00")
+	  (_hr-yellow+2   "#5f5f00")
 	  ;; ----------------------
 	  (_hr-green-1    "#d7ffd7")
 	  (hr-green      "#b5bd68")
-	  (hr-green+1    "#5f875f")
-	  (_hr-green+2    "#005f00")
+	  (hr-green+1    "#8c9440") ; Added
+	  (hr-green+2    "#5f875f")
+	  (_hr-green+3    "#005f00")
 	  ;; ----------------------
 	  (hr-cyan       "#8abeb7")
-	  (_hr-cyan+1     "#005f5f")
+	  (hr-cyan+1     "#5e8d87") ; Added
+	  (_hr-cyan+2     "#005f5f")
 	  ;; ----------------------
 	  (hr-blue-1     "#d7d7ff")
 	  (hr-blue       "#81a2be")
-	  (hr-blue+1     "#5f5f87")
-	  (_hr-blue+2     "#00005f")
+	  (hr-blue+1     "#5f819d") ; Added
+	  (hr-blue+2     "#5f5f87")
+	  (_hr-blue+3     "#00005f")
 	  ;; ----------------------
 	  (hr-magenta    "#b294bb")
-	  (_hr-magenta+1  "#5f005f"))
+	  (hr-magenta+1  "#85678f") ; Added
+	  (_hr-magenta+2  "#5f005f"))
 
 ;;; Theme Faces
 
@@ -365,7 +370,7 @@
    `(sh-quoted-exec                           ((t (:foreground nil                                     :inherit font-lock-preprocessor-face))))
 
 ;;;;; show-paren-mode
-   `(show-paren-match                         ((t (:foreground ,hr-cyan      :background ,hr-blue+1    :weight bold))))
+   `(show-paren-match                         ((t (:foreground ,hr-cyan      :background ,hr-blue+2    :weight bold))))
    `(show-paren-match-expression              ((t (                                                    :inherit show-paren-match))))
    `(show-paren-mismatch                      ((t (:foreground ,hr-white+1   :background ,hr-red       :weight bold))))
 
@@ -381,6 +386,19 @@
    `(tab-line-tab                             ((t (                          :background ,hr-black-3))))
    `(tab-line-tab-current                     ((t (:foreground ,hr-white     :background ,hr-black-6))))
    `(tab-line-tab-inactive                    ((t (                                                    :inherit tab-line-tab))))
+
+;;;;; term
+   `(term                                     ((t (:foreground ,hr-fg        :background ,hr-bg))))
+   `(term-bold                                ((t (                                                    :weight bold))))
+   `(term-color-black                         ((t (:foreground ,hr-black-3   :background ,hr-black-6))))
+   `(term-color-blue                          ((t (:foreground ,hr-blue+1    :background ,hr-blue))))
+   `(term-color-cyan                          ((t (:foreground ,hr-cyan+1    :background ,hr-cyan))))
+   `(term-color-green                         ((t (:foreground ,hr-green+1   :background ,hr-green))))
+   `(term-color-magenta                       ((t (:foreground ,hr-magenta+1 :background ,hr-magenta))))
+   `(term-color-red                           ((t (:foreground ,hr-red+1     :background ,hr-red))))
+   `(term-color-white                         ((t (:foreground ,hr-white+6   :background ,hr-fg))))
+   `(term-color-yellow                        ((t (:foreground ,hr-orange    :background ,hr-yellow))))
+   `(term-underline                           ((t (:underline t))))
 
 ;;;;; tty-menu
    `(tty-menu-disabled-face                   ((t (                          :background ,hr-black-3))))
@@ -789,12 +807,12 @@
    `(rainbow-delimiters-depth-1-face          ((t (:foreground ,hr-fg))))
    `(rainbow-delimiters-depth-2-face          ((t (:foreground ,hr-cyan))))
    `(rainbow-delimiters-depth-3-face          ((t (:foreground ,hr-yellow))))
-   `(rainbow-delimiters-depth-4-face          ((t (:foreground ,hr-green+1))))
+   `(rainbow-delimiters-depth-4-face          ((t (:foreground ,hr-green+2))))
    `(rainbow-delimiters-depth-5-face          ((t (:foreground ,hr-blue))))
    `(rainbow-delimiters-depth-6-face          ((t (:foreground ,hr-fg))))
    `(rainbow-delimiters-depth-7-face          ((t (:foreground ,hr-cyan))))
    `(rainbow-delimiters-depth-8-face          ((t (:foreground ,hr-yellow))))
-   `(rainbow-delimiters-depth-9-face          ((t (:foreground ,hr-green+1))))
+   `(rainbow-delimiters-depth-9-face          ((t (:foreground ,hr-green+2))))
    `(rainbow-delimiters-depth-10-face         ((t (:foreground ,hr-blue))))
    `(rainbow-delimiters-unmatched-face        ((t (:foreground ,hr-red))))
 
