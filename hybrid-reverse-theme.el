@@ -74,6 +74,7 @@
 ;; - mode-line
 ;; - org-mode*
 ;; - outline-mode
+;; - ruler-mode
 ;; - shell-script-mode
 ;; - show-paren-mode
 ;; - tab-bar-mode
@@ -365,6 +366,18 @@
    `(outline-6                                ((t (:foreground ,hr-green))))
    `(outline-7                                ((t (:foreground ,hr-blue))))
    `(outline-8                                ((t (:foreground ,hr-yellow))))
+
+;;;;; ruler-mode
+   `(ruler-mode-column-number                 ((t (:foreground ,hr-fg                                  :inherit ruler-mode-default :weight bold))))
+   `(ruler-mode-comment-column                ((t (:foreground ,hr-magenta                             :inherit ruler-mode-default))))
+   `(ruler-mode-current-column                ((t (:foreground ,hr-orange                              :inherit ruler-mode-default :weight bold))))
+   `(ruler-mode-default                       ((t (:foreground ,hr-fg        :background ,hr-black-3))))
+   `(ruler-mode-fill-column                   ((t (:foreground ,hr-red                                 :inherit ruler-mode-default))))
+   `(ruler-mode-fringes                       ((t (:foreground ,hr-cyan                                :inherit ruler-mode-default))))
+   `(ruler-mode-goal-column                   ((t (:foreground ,hr-blue                                :inherit ruler-mode-default))))
+   `(ruler-mode-margins                       ((t (                          :background ,hr-bg        :inherit ruler-mode-default))))
+   `(ruler-mode-pad                           ((t (:foreground ,hr-fg        :background ,hr-black-6))))
+   `(ruler-mode-tab-stop                      ((t (:foreground ,hr-yellow                              :inherit ruler-mode-default ))))
 
 ;;;;; shell-script-mode
    `(sh-heredoc                               ((t (:foreground nil                                     :inherit font-lock-string-face))))
