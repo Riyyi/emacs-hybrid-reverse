@@ -352,6 +352,7 @@
    `(org-scheduled-today                      ((t (:foreground ,hr-green))))
    `(org-special-keyword                      ((t (:foreground ,hr-orange))))
    `(org-table                                ((t (:foreground ,hr-magenta))))
+   `(org-tag                                  ((t (:foreground ,hr-red                                 :weight bold))))
    `(org-time-grid                            ((t (:foreground ,hr-yellow))))
    `(org-todo                                 ((t (:foreground ,hr-red))))
    `(org-upcoming-deadline                    ((t (:foreground ,hr-orange))))
