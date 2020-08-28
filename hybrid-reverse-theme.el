@@ -202,9 +202,9 @@
    `(window-divider-last-pixel                ((t (:foreground ,hr-black-6))))
 
 ;;;;; custom (M-x customize)
-   `(custom-button                            ((t (:foreground ,hr-bg        :background ,hr-white+4   :box (:line-width 2 :color nil :style released-button)))))
-   `(custom-button-mouse                      ((t (:background ,hr-white                               :inherit custom-button))))
-   `(custom-button-pressed                    ((t (:background ,hr-white+5                             :inherit custom-button :box (:style pressed-button)))))
+   `(custom-button                            ((t (:foreground ,hr-fg        :background ,hr-black-3   :box (:line-width 2 :color ,hr-black-8)))))
+   `(custom-button-mouse                      ((t (                          :background ,hr-black-6   :inherit custom-button))))
+   `(custom-button-pressed                    ((t (                          :background ,hr-black-8   :inherit custom-button))))
    `(custom-button-pressed-unraised           ((t (:foreground ,hr-magenta                             :inherit custom-button-unraised))))
    `(custom-button-unraised                   ((t (                                                    :underline t))))
    `(custom-changed                           ((t (:foreground ,hr-bg        :background ,hr-blue))))
