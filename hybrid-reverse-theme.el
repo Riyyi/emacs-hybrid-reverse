@@ -116,7 +116,7 @@
 	  (_hr-white+2    "#d0d0d0") ; grey82~
 	  (_hr-white+3    "#cccccc") ; grey80
 	  (hr-fg         "#c5c8c6") ; grey78~
-	  (hr-white+4    "#bcbcbc") ; grey74~
+	  (_hr-white+4    "#bcbcbc") ; grey74~
 	  (hr-white+5    "#9e9e9e") ; grey62
 	  (hr-white+6    "#707880") ; grey46~
 	  ;; ----------------------
