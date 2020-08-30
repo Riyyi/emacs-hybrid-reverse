@@ -109,64 +109,92 @@
   :group 'faces
   :prefix "hybrid-reverse-"
   :link '(url-link :tag "GitHub" "https://github.com/riyyi/emacs-hybrid-reverse")
-  :tag "Hybrid Reverse Faces")
+  :tag "Hybrid Reverse")
+
+;;; User customize options
+
+(eval-and-compile
+  (defcustom hybrid-reverse-theme-override-colors-alist '()
+	"Association list of palette color overrides.
+Values can be mapped to variables, using the same syntax as the
+one present in `hybrid-reverse-theme-default-colors-alist'."
+	:group 'hybrid-reverse
+	:type '(alist
+			:key-type (string :tag "Name")
+			:value-type (string :tag " Hex"))))
 
 ;;; Color Palette
 
-(let ((_class '((class color) (min-colors 89)))
-	  (hr-white      "#ffffff") ; grey100
-	  (hr-white+1    "#e4e4e4") ; grey90~
-	  (_hr-white+2    "#d0d0d0") ; grey82~
-	  (_hr-white+3    "#cccccc") ; grey80
-	  (hr-fg         "#c5c8c6") ; grey78~
-	  (_hr-white+4    "#bcbcbc") ; grey74~
-	  (hr-white+5    "#9e9e9e") ; grey62
-	  (hr-white+6    "#707880") ; grey46~
+(eval-and-compile
+  (defconst hybrid-reverse-theme-default-colors-alist
+	'(
+	  ("hr-white"      . "#ffffff") ; grey100
+	  ("hr-white+1"    . "#e4e4e4") ; grey90~
+	  ("_hr-white+2"   . "#d0d0d0") ; grey82~
+	  ("_hr-white+3"   . "#cccccc") ; grey80
+	  ("hr-fg"         . "#c5c8c6") ; grey78~
+	  ("_hr-white+4"   . "#bcbcbc") ; grey74~
+	  ("hr-white+5"    . "#9e9e9e") ; grey62
+	  ("hr-white+6"    . "#707880") ; grey46~
 	  ;; ----------------------
-	  (hr-black-8    "#656565") ; grey40~
-	  (hr-black-7    "#5f5f5f") ; grey37~
-	  (hr-black-6    "#373b41") ; grey24~
-	  (hr-black-5    "#383838") ; grey22
-	  (_hr-black-4    "#303030") ; grey19
-	  (hr-black-3    "#282a2e") ; grey16~
-	  (hr-black-2    "#212121") ; grey13 ; Added
-	  (_hr-black-1    "#1d1f21") ; grey12
-	  (hr-bg         "#1c1c1c") ; grey11
-	  (hr-black      "#000000") ; grey0
+	  ("hr-black-8"    . "#656565") ; grey40~
+	  ("hr-black-7"    . "#5f5f5f") ; grey37~
+	  ("hr-black-6"    . "#373b41") ; grey24~
+	  ("hr-black-5"    . "#383838") ; grey22
+	  ("_hr-black-4"   . "#303030") ; grey19
+	  ("hr-black-3"    . "#282a2e") ; grey16~
+	  ("hr-black-2"    . "#212121") ; grey13 ; Added
+	  ("_hr-black-1"   . "#1d1f21") ; grey12
+	  ("hr-bg"         . "#1c1c1c") ; grey11
+	  ("hr-black"      . "#000000") ; grey0
 	  ;; ----------------------
-	  (_hr-red-1      "#ffd7d7")
-	  (hr-red        "#cc6666")
-	  (hr-red+1      "#a54242") ; Added
-	  (_hr-red+2      "#5f0000")
+	  ("_hr-red-1"     . "#ffd7d7")
+	  ("hr-red"        . "#cc6666")
+	  ("hr-red+1"      . "#a54242") ; Added
+	  ("_hr-red+2"     . "#5f0000")
 	  ;; ----------------------
-	  (hr-orange     "#de935f")
-	  (_hr-orange+1   "#875f00")
+	  ("hr-orange"     . "#de935f")
+	  ("_hr-orange+1"  . "#875f00")
 	  ;; ----------------------
-	  (hr-yellow     "#f0c674")
-	  (_hr-yellow+2   "#5f5f00")
+	  ("hr-yellow"     . "#f0c674")
+	  ("_hr-yellow+2"  . "#5f5f00")
 	  ;; ----------------------
-	  (_hr-green-1    "#d7ffd7")
-	  (hr-green      "#b5bd68")
-	  (hr-green+1    "#8c9440") ; Added
-	  (hr-green+2    "#5f875f")
-	  (_hr-green+3    "#005f00")
+	  ("_hr-green-1"   . "#d7ffd7")
+	  ("hr-green"      . "#b5bd68")
+	  ("hr-green+1"    . "#8c9440") ; Added
+	  ("hr-green+2"    . "#5f875f")
+	  ("_hr-green+3"   . "#005f00")
 	  ;; ----------------------
-	  (hr-cyan       "#8abeb7")
-	  (hr-cyan+1     "#5e8d87") ; Added
-	  (_hr-cyan+2     "#005f5f")
+	  ("hr-cyan"       . "#8abeb7")
+	  ("hr-cyan+1"     . "#5e8d87") ; Added
+	  ("_hr-cyan+2"    . "#005f5f")
 	  ;; ----------------------
-	  (hr-blue-1     "#d7d7ff")
-	  (hr-blue       "#81a2be")
-	  (hr-blue+1     "#5f819d") ; Added
-	  (hr-blue+2     "#5f5f87")
-	  (_hr-blue+3     "#00005f")
+	  ("hr-blue-1"     . "#d7d7ff")
+	  ("hr-blue"       . "#81a2be")
+	  ("hr-blue+1"     . "#5f819d") ; Added
+	  ("hr-blue+2"     . "#5f5f87")
+	  ("_hr-blue+3"    . "#00005f")
 	  ;; ----------------------
-	  (hr-magenta    "#b294bb")
-	  (hr-magenta+1  "#85678f") ; Added
-	  (_hr-magenta+2  "#5f005f"))
+	  ("hr-magenta"    . "#b294bb")
+	  ("hr-magenta+1"  . "#85678f") ; Added
+	  ("_hr-magenta+2" . "#5f005f"))
+	"The entire color palette of Hybrid Reverse theme.
+Each element has the form (NAME . HEX).")
+
+  (defmacro hybrid-reverse-theme-with-color-variables (&rest body)
+	"`let' bind all colors around BODY.
+Also bind `class' to ((class color) (min-colors 89))."
+	(declare (indent 0))
+	`(let ((_class '((class color) (min-colors 89)))
+           ,@(mapcar (lambda (cons)
+                       (list (intern (car cons)) (cdr cons)))
+					 (append hybrid-reverse-theme-default-colors-alist
+							 hybrid-reverse-theme-override-colors-alist)))
+       ,@body)))
 
 ;;; Theme Faces
 
+(hybrid-reverse-theme-with-color-variables
   (custom-theme-set-faces
    'hybrid-reverse
 
