@@ -58,20 +58,14 @@ To see the full list of the pallete color names you can override:
 
 *** Custom Faces
 
-=*This only works on Emac 26.3 and below*=
-
 If you'd like to tweak the theme by changing the colors of specific faces, you
-can do so with the following function after loading the theme:
+can do so with the =set-face= functions:
 
 #+BEGIN_SRC emacs-lisp
-(load-theme 'hybrid-reverse t)
 (hybrid-reverse-theme-with-color-variables
- (custom-theme-set-faces
-  'hybrid-reverse
-  `(cursor  ((,class :background ,hr-red)))
-  `(default ((,class :foreground ,hr-green :background "#FFFF00")))
-  `(region  ((,class :background ,hr-blue)))
-  ))
+   (set-face-foreground 'link hr-red)
+   (set-face-background 'cursor hr-green)
+   (set-face-attribute  'default nil :foreground hr-blue :background "#FFFF00"))
 #+END_SRC
 
 To see the full list of the pallete color names or the faces, consult the
