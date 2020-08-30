@@ -102,11 +102,14 @@
 (when (version< emacs-version "24.1")
   (error "Hybrid Reverse theme requires Emacs 24.1 or later!"))
 
-(deftheme hybrid-reverse "The Hybrid Reverse color theme")
+(deftheme hybrid-reverse "Face colors like Tomorrow Night with a dark background.")
 
 (defgroup hybrid-reverse nil
-  "Hybrid Reverse theme."
-  :group 'faces)
+  "Faces used by the Hybrid Reverse theme."
+  :group 'faces
+  :prefix "hybrid-reverse-"
+  :link '(url-link :tag "GitHub" "https://github.com/riyyi/emacs-hybrid-reverse")
+  :tag "Hybrid Reverse Faces")
 
 ;;; Color Palette
 
