@@ -37,3 +37,42 @@ To activate the theme automatically on Emacs startup, add this to your =init.el=
 #+BEGIN_SRC emacs-lisp
   (load-theme 'hybrid-reverse t)
 #+END_SRC
+** Customization
+*** Custom Colors
+
+If you'd like to tweak the theme by changing the pallete colors, you can do so
+by defining new values in the following variable before loading the theme:
+
+#+BEGIN_SRC emacs-lisp
+(setq hybrid-reverse-theme-override-colors-alist
+	  '(("hr-red"   . "#FF0000")
+		("hr-green" . "#00FF00")
+		("hr-blue"  . "#0000FF")))
+(load-theme 'hybrid-reverse t)
+#+END_SRC
+
+To see the full list of the pallete color names you can override:
+
+1. press @@html:<kbd>@@C-h@@html:</kbd>@@ @@html:<kbd>@@v@@html:</kbd>@@
+3. type =hybrid-reverse-theme-default-colors-alist= and confirm with @@html:<kbd>@@↲@@html:</kbd>@@
+
+*** Custom Faces
+
+=*This only works on Emac 26.3 and below*=
+
+If you'd like to tweak the theme by changing the colors of specific faces, you
+can do so with the following function after loading the theme:
+
+#+BEGIN_SRC emacs-lisp
+(load-theme 'hybrid-reverse t)
+(hybrid-reverse-theme-with-color-variables
+ (custom-theme-set-faces
+  'hybrid-reverse
+  `(cursor  ((,class :background ,hr-red)))
+  `(default ((,class :foreground ,hr-green :background "#FFFF00")))
+  `(region  ((,class :background ,hr-blue)))
+  ))
+#+END_SRC
+
+To see the full list of the pallete color names or the faces, consult the
+=hybrid-reverse-theme.el= source file.
