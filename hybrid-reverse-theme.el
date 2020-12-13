@@ -226,6 +226,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(tooltip                                  ((,class                           :background ,hr-black-3)))
    `(tool-bar                                 ((,class                           :background ,hr-black-3)))
    `(vertical-border                          ((,class :foreground ,hr-white+5)))
+   `(widget-button                            ((,class                                                     :weight normal)))
    `(widget-button-pressed                    ((,class :foreground ,hr-orange)))
    `(widget-field                             ((,class :background ,hr-black-6)))
    `(window-divider                           ((,class :foreground ,hr-white+5)))
@@ -524,7 +525,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(dashboard-banner-logo-title              ((,class :foreground ,hr-fg)))
    `(dashboard-footer                         ((,class :foreground ,hr-white+6)))
    `(dashboard-heading                        ((,class :foreground ,hr-blue)))
+   `(dashboard-items-face                     ((,class                                                     :inherit widget-button)))
    `(dashboard-navigator                      ((,class :foreground ,hr-blue)))
+   `(dashboard-no-items-face                  ((,class                                                     :inherit widget-button)))
    `(dashboard-text-banner                    ((,class :foreground ,hr-blue)))
 
 ;;;;; deft
