@@ -36,6 +36,7 @@
 ;; - elfeed
 ;; - evil
 ;; - flycheck
+;; - hydra
 ;; - ido-vertical-mode
 ;; - linum-relative
 ;; - lsp-ui
@@ -607,6 +608,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(flycheck-fringe-error                    ((,class :foreground ,hr-red)))
    `(flycheck-fringe-info                     ((,class :foreground ,hr-cyan)))
    `(flycheck-fringe-warning                  ((,class :foreground ,hr-orange)))
+
+;;;;; hydra
+   `(hydra-face-amaranth                      ((,class :foreground ,hr-orange                              :weight bold)))
+   `(hydra-face-blue                          ((,class :foreground ,hr-blue :weight bold)))
+   `(hydra-face-pink                          ((,class :foreground ,hr-yellow :weight bold)))
+   `(hydra-face-red                           ((,class :foreground ,hr-red                                 :weight bold)))
+   `(hydra-face-teal                          ((,class :foreground ,hr-cyan                                :weight bold)))
 
 ;;;;; ido-vertical-mode
    `(ido-vertical-match-face                  ((,class :foreground ,hr-yellow                              :weight bold :underline t)))
