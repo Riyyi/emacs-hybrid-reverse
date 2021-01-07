@@ -214,7 +214,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; UI
    `(border                                   ((,class :foreground ,hr-white+5)))
    `(fill-column-indicator                    ((,class :foreground ,hr-black-3)))
-   `(fringe                                   ((,class :foreground ,hr-fg        :background ,hr-bg)))
+   `(fringe                                   ((,class :foreground ,hr-fg        :background ,hr-black-2)))
    `(highlight                                ((,class :foreground ,hr-yellow    :background ,hr-bg)))
    `(highlight-changes                        ((,class :foreground ,hr-red       :background ,hr-bg)))
    `(hl-line                                  ((,class                           :background ,hr-black-3   :extend t)))
