@@ -65,6 +65,7 @@
 ;;
 ;; Supported defaults:
 ;; - custom (M-x customize)
+;; - diff-mode
 ;; - dired
 ;; - display-line-numbers-mode
 ;; - font-lock-mode
@@ -157,7 +158,7 @@ one present in `hybrid-reverse-theme-default-colors-alist'."
 	  ("_hr-red+2"     . "#5f0000")
 	  ;; ----------------------
 	  ("hr-orange"     . "#de935f")
-	  ("_hr-orange+1"  . "#875f00")
+	  ("hr-orange+1"   . "#875f00")
 	  ;; ----------------------
 	  ("hr-yellow"     . "#f0c674")
 	  ("_hr-yellow+2"  . "#5f5f00")
@@ -261,6 +262,24 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(custom-variable-button                   ((,class                                                     :weight bold :underline t)))
    `(custom-variable-tag                      ((,class :foreground ,hr-blue)))
    `(custom-visibility                        ((,class                                                     :inherit link :underline t :height 0.8)))
+
+;;;;; diff-mode
+   `(diff-added                               ((,class :foreground ,hr-green                               :extend t)))
+   `(diff-changed                             ((,class :foreground ,hr-orange                              :extend t)))
+   `(diff-context                             ((,class :foreground ,hr-fg                                  :extend t)))
+   `(diff-file-header                         ((,class :foreground ,hr-fg                                  :weight bold :extend t)))
+   `(diff-function                            ((,class                                                     :inherit diff-header)))
+   `(diff-header                              ((,class :foreground ,hr-fg                                  :extend t)))
+   `(diff-hunk-header                         ((,class :foreground ,hr-cyan)))
+   `(diff-index                               ((,class                                                     :inherit diff-file-header)))
+   `(diff-indicator-added                     ((,class :foreground ,hr-green)))
+   `(diff-indicator-changed                   ((,class :foreground ,hr-orange)))
+   `(diff-indicator-removed                   ((,class :foreground ,hr-red)))
+   `(diff-nonexistent                         ((,class                                                     :inherit diff-file-header)))
+   `(diff-refine-added                        ((,class :foreground ,hr-bg        :background ,hr-green+1)))
+   `(diff-refine-changed                      ((,class :foreground ,hr-blue      :background ,hr-orange+1)))
+   `(diff-refine-removed                      ((,class :foreground ,hr-bg        :background ,hr-red+1)))
+   `(diff-removed                             ((,class :foreground ,hr-red                                 :extend t)))
 
 ;;;;; dired
    `(dired-directory                          ((,class :foreground ,hr-magenta)))
