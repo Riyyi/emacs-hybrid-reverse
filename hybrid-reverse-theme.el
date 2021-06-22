@@ -34,6 +34,7 @@
 ;; - company-mode
 ;; - dashboard
 ;; - deft
+;; - diff-hl
 ;; - doom-modeline
 ;; - elfeed
 ;; - evil
@@ -277,7 +278,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diff-indicator-removed                   ((,class :foreground ,hr-red)))
    `(diff-nonexistent                         ((,class                                                     :inherit diff-file-header)))
    `(diff-refine-added                        ((,class :foreground ,hr-bg        :background ,hr-green+1)))
-   `(diff-refine-changed                      ((,class :foreground ,hr-blue      :background ,hr-orange+1)))
+   `(diff-refine-changed                      ((,class :foreground ,hr-bg        :background ,hr-orange+1)))
    `(diff-refine-removed                      ((,class :foreground ,hr-bg        :background ,hr-red+1)))
    `(diff-removed                             ((,class :foreground ,hr-red                                 :extend t)))
 
@@ -560,6 +561,17 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(deft-summary-face                        ((,class                                                     :inherit font-lock-comment-face)))
    `(deft-time-face                           ((,class :foreground ,hr-magenta)))
    `(deft-title-face                          ((,class :foreground ,hr-blue                                :weight bold)))
+
+;;;;; diff-hl
+   `(diff-hl-change                           ((,class :foreground ,hr-yellow :background ,hr-yellow)))
+   `(diff-hl-delete                           ((,class :foreground ,hr-red+1 :background ,hr-red+1)))
+   `(diff-hl-dired-change                     ((,class                                                     :inherit diff-hl-change)))
+   `(diff-hl-dired-delete                     ((,class                                                     :inherit diff-hl-delete)))
+   `(diff-hl-dired-ignored                    ((,class :inherit dired-ignored)))
+   `(diff-hl-dired-insert                     ((,class                                                     :inherit diff-hl-insert)))
+   `(diff-hl-dired-unknown                    ((,class :inherit dired-ignored)))
+   `(diff-hl-insert                           ((,class :foreground ,hr-green+1 :background ,hr-green+1)))
+   `(diff-hl-reverted-hunk-highlight          ((,class                                                     :inverse-video t)))
 
 ;;;;; doom-modeline
    `(doom-modeline-bar                        ((,class                           :background ,hr-blue)))
