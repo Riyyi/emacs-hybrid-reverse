@@ -32,6 +32,8 @@
 ;; - centaur-tabs
 ;; - column-enforce-mode
 ;; - company-mode
+;; - consult
+;; - consult-project-extra
 ;; - dashboard
 ;; - deft
 ;; - diff-hl
@@ -54,6 +56,7 @@
 ;; - popup
 ;; - powerline
 ;; - powerline-evil
+;; - prescient
 ;; - rainbow-delimiters
 ;; - selectrum
 ;; - smart-mode-line
@@ -68,6 +71,7 @@
 ;;
 ;; Supported defaults:
 ;; - ansi-term
+;; - completions
 ;; - custom (M-x customize)
 ;; - diff-mode
 ;; - dired
@@ -232,6 +236,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(minibuffer-prompt                        ((,class :foreground ,hr-blue      :background ,hr-bg)))
    `(region                                   ((,class                           :background ,hr-black-6)))
    `(secondary-selection                      ((,class                           :background ,hr-black-3)))
+   `(separator-line                           ((,class                           :background ,hr-black-7   :height 0.1)))
+   `(shadow                                   ((,class :foreground ,hr-white+6)))
    `(tooltip                                  ((,class                           :background ,hr-black-3)))
    `(tool-bar                                 ((,class                           :background ,hr-black-3)))
    `(vertical-border                          ((,class :foreground ,hr-white+5)))
@@ -266,6 +272,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ansi-color-underline                     ((,class :underline t)))
    `(ansi-color-white                         ((,class :foreground ,hr-white+6)))
    `(ansi-color-yellow                        ((,class :foreground ,hr-orange)))
+
+;;;;; completions
+   `(completions-annotations                  ((,class :foreground ,hr-white+6)))
+   `(completions-common-part                  ((,class :foreground ,hr-blue)))
+   `(completions-first-difference             ((,class :foreground ,hr-yellow                              :weight bold)))
+   ;; `(completions-group-separator              ((,class)))
+   ;; `(completions-group-title                  ((,class)))
 
 ;;;;; custom (M-x customize)
    `(custom-button                            ((,class :foreground ,hr-fg        :background ,hr-black-3   :box (:line-width 2 :color ,hr-black-8))))
@@ -576,6 +589,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-tooltip-common-selection         ((,class :foreground ,hr-bg        :background ,hr-yellow)))
    `(company-tooltip-mouse                    ((,class :foreground ,hr-yellow    :background ,hr-black-6)))
    `(company-tooltip-selection                ((,class :foreground ,hr-yellow    :background ,hr-black-6)))
+
+;;;;; consult
+   `(consult-buffer                           ((,class)))
+   `(consult-file                             ((,class)))
+
+;;;;; consult-project-extra
+   `(consult-project-extra-projects           ((,class)))
 
 ;;;;; dashboard
    `(dashboard-banner-logo-title              ((,class :foreground ,hr-fg)))
@@ -943,6 +963,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(powerline-evil-replace-face              ((,class :foreground ,hr-black     :background ,hr-orange    :inherit powerline-evil-base-face)))
    `(powerline-evil-visual-face               ((,class :foreground ,hr-black     :background ,hr-magenta   :inherit powerline-evil-base-face)))
 
+;;;;; prescient
+   `(prescient-primary-highlight              ((,class :foreground ,hr-blue)))
+   `(prescient-secondary-highlight            ((,class :foreground ,hr-red)))
+
 ;;;;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face          ((,class :foreground ,hr-fg)))
    `(rainbow-delimiters-depth-2-face          ((,class :foreground ,hr-cyan)))
@@ -957,12 +981,14 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(rainbow-delimiters-unmatched-face        ((,class :foreground ,hr-red)))
 
 ;;;;; selectrum
+   `(selectrum-completion-annotation          ((,class                                                     :inherit completions-annotations)));
+   `(selectrum-completion-docsig              ((,class                                                     :inherit selectrum-completion-annotation)));
    `(selectrum-current-candidate              ((,class :foreground ,hr-orange                              :weight bold)))
-   `(selectrum-mouse-highlight                ((,class :foreground ,hr-yellow)))
-
-;;;;; selectrum-prescient
-   `(selectrum-prescient-primary-highlight    ((,class :foreground ,hr-blue)))
-   `(selectrum-prescient-secondary-highlight  ((,class :foreground ,hr-red)))
+   `(selectrum-group-separator                ((,class                                                     :inherit shadow :strike-through t)));
+   `(selectrum-group-title                    ((,class                                                     :inherit shadow :slant italic)));
+   `(selectrum-mouse-highlight                ((,class                                                     :inherit highlight)))
+   `(selectrum-quick-keys-highlight           ((,class :foreground ,hr-bg        :background ,hr-yellow    :weight bold)));
+   `(selectrum-quick-keys-match               ((,class :foreground ,hr-bg        :background ,hr-orange    :weight bold)));
 
 ;;;;; smart-mode-line
    `(sml/charging                             ((,class :foreground ,hr-fg)))
